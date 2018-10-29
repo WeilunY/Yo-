@@ -26,7 +26,7 @@ body,
     background-color: #602060; /* purple background */
     border: 5px solid white;
     color: white; /* White text */
-
+    padding: 1.4%; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
     text-align: center;
