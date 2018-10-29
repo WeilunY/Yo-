@@ -1,135 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel = "stylesheet" href = "CSS/index.css">
+
 </head>
+<link rel = "stylesheet" href = "CSS/index.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <body>
 
-<h1>YO!</h1>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #602060;">
+  <a class="navbar-brand" href="#">YO!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class = "nav-item">
+        <a class = "nav-link" href="Pages/friends.html">Friends</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Pages/profile.html">Profile</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
 <input id="pac-input" class="controls" type="text" placeholder="Search...">
 <div id="map"></div>
 
-<div class = "button">
-  <a href = "Pages/profile.html"><button> Profile </button></a>
-  <button onclick="initMap_currentLocation()"> Current Location </button>
-  <a href = "Pages/chat.html"><button> Chat </button></a>
-</div>
 
-<!-- chat box -->
-<div id="live-chat">
-
-  <header class="clearfix">
-
-    <a href="#" class="chat-close">x</a>
-
-    <h4>William</h4>
-
-    <span class="chat-message-counter">3</span>
-
-  </header>
-
-  <div class="chat">
-
-    <div class="chat-history">
-
-      <div class="chat-message clearfix">
-
-        <img src="http://lorempixum.com/32/32/people" alt="" width="32" height="32">
-
-        <div class="chat-message-content clearfix">
-
-          <span class="chat-time">13:35</span>
-
-          <h5>William</h5>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, explicabo quasi ratione odio dolorum harum.</p>
-
-        </div> <!-- end chat-message-content -->
-
-      </div> <!-- end chat-message -->
-
-      <hr>
-
-      <div class="chat-message clearfix">
-
-        <img src="http://gravatar.com/avatar/2c0ad52fc5943b78d6abe069cc08f320?s=32" alt="" width="32" height="32">
-
-        <div class="chat-message-content clearfix">
-
-          <span class="chat-time">13:37</span>
-
-          <h5>Marco Biedermann</h5>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
-
-        </div> <!-- end chat-message-content -->
-
-      </div> <!-- end chat-message -->
-
-      <hr>
-
-      <div class="chat-message clearfix">
-
-        <img src="http://lorempixum.com/32/32/people" alt="" width="32" height="32">
-
-        <div class="chat-message-content clearfix">
-
-          <span class="chat-time">13:38</span>
-
-          <h5>William</h5>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-
-        </div> <!-- end chat-message-content -->
-
-      </div> <!-- end chat-message -->
-
-      <hr>
-
-    </div> <!-- end chat-history -->
-
-    <p class="chat-feedback">Your partner is typing…</p>
-
-    <form action="#" method="post">
-
-      <fieldset>
-
-        <input type="text" placeholder="Type your message…" autofocus>
-        <input type="hidden">
-
-      </fieldset>
-
-    </form>
-
-  </div> <!-- end chat -->
-
-</div> <!-- end live-chat -->
-
-<!-- scripts -->
 <script src = "JS/GoogleMap.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8se8vgPxg675Ez2KFs7y7Ed9NDBIt8vc&callback&libraries=places&callback=initAutocomplete"
          async defer></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script>
-(function() {
-
-$('#live-chat header').on('click', function() {
-
-  $('.chat').slideToggle(300, 'swing');
-  $('.chat-message-counter').fadeToggle(300, 'swing');
-
-});
-
-$('.chat-close').on('click', function(e) {
-
-  e.preventDefault();
-  $('#live-chat').fadeOut(300);
-
-});
-
-}) ();
-</script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
