@@ -107,6 +107,7 @@ function initAutocomplete() {
 
   });
 
+
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
@@ -168,12 +169,11 @@ function initAutocomplete() {
 }
 
 
-// Locate current location
-function initMap_currentLocation() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 15,
-    styles: [
+function initAutocomplete_current() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 32.88, lng: -117.23},
+    zoom: 13,
+    styles:[
     {
         "featureType": "road",
         "stylers": [
@@ -272,10 +272,10 @@ function initMap_currentLocation() {
     },
     {}
 ]
-  });
-  infoWindow = new google.maps.InfoWindow;
 
-  // Try HTML5 geolocation.
+  });
+
+  infoWindow = new google.maps.InfoWindow;
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -294,8 +294,9 @@ function initMap_currentLocation() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
-
 }
+
+
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);

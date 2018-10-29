@@ -34,7 +34,7 @@ body,
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 24px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     width: 100px;
@@ -132,7 +132,7 @@ h1 {
         font-weight: 300;
         text-overflow: ellipsis;
         width: 40%;
-
+        border-radius: 10px;
         text-align: center;
       }
 
