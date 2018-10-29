@@ -72,8 +72,8 @@ h1 {
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
-	text-align: center;
   height: 8%;
+  text-align: center;
 }
 
 /* map */
