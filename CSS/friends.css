@@ -8,11 +8,14 @@
 .cardlist{
   margin-left: 10%;
   margin-right: 10%;
+  padding-top: 40px;
 }
 
 /* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #602060;
     color: white;
     border-radius: 5px;
@@ -52,9 +55,15 @@ body {
   text-align: center;
   background-color: #f1f1f1;
 }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 50%) {
+    .column {
+        width: 50%;
+    }
+}
 
 /* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 25%) {
   .column {
     width: 100%;
     display: block;
