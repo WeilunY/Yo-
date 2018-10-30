@@ -212,7 +212,7 @@ p { margin: 0; }
 
 	font-size: 12px;
 	right: 5%;
-  bottom: 8%;
+  bottom: 0px;
 	position: fixed;
 	width: 300px;
 }
@@ -226,7 +226,7 @@ p { margin: 0; }
 }
 
 #live-chat h4:before {
-	background: #1a8a34;
+	background: #10b235;
 	border-radius: 50%;
 	content: "";
 	display: inline-block;
