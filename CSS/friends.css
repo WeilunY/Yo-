@@ -1,5 +1,10 @@
 
-
+body{
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #d7e1ec 74%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -16,9 +21,12 @@
     padding: 2px 16px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #602060;
+    /*background-color: #602060;*/
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 
@@ -57,10 +65,23 @@ body {
   text-align: center;
   background-color: #f1f1f1;
 }
+#card-t{
+  /*background: rgba(245,245,245,0.6);*/
+  background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.4),rgba(255,255,255,0.6));
+  background-color: rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  border: 0px;
+  box-shadow: 2px 6px 6px 2px rgba(0,0,0,0.15);
+}
 
 .viewbuttons{
 
   padding-top: 10px;
+}
+
+#btn-chat{
+  border-radius: 10px;
+  font-weight:bold;
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 50%) {

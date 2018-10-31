@@ -1,7 +1,8 @@
 body {
   font-family: Arial;
   padding: 20px;
-  background-image: linear-gradient(to bottom, #654ea3, #eaafc8);
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #d7e1ec 74%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -20,7 +21,7 @@ body {
   padding-top: 30px;
   font-size: 40px;
   text-align: center;
-  color: white;
+  color: black;
 
 
 }
@@ -28,6 +29,7 @@ body {
 .header h2{
   font-weight: bold;
   font-size: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -59,10 +61,12 @@ body {
 }
 
 #card-t{
-  background: rgba(245,245,245,0.6);
+  /*background: rgba(245,245,245,0.6);*/
+  background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.4),rgba(255,255,255,0.6));
+  background-color: rgba(250, 250, 250, 0.2);
   border-radius: 12px;
   border: 0px;
-  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.15);
+  box-shadow: 2px 6px 6px 2px rgba(0,0,0,0.15);
 }
 
 /* Clear floats after the columns */
