@@ -8,6 +8,7 @@ body {
 }
 .card h2{
   font-family: 'Roboto', sans-serif;
+  color: #4d194d;
 }
 
 .blog{
@@ -21,7 +22,7 @@ body {
   padding-top: 30px;
   font-size: 40px;
   text-align: center;
-  color: black;
+  color: #4d194d;
 
 
 }
