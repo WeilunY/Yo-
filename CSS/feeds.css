@@ -1,19 +1,27 @@
 body {
   font-family: Arial;
   padding: 20px;
-  background: #f1f1f1;
+  background-image: linear-gradient(to bottom, #654ea3, #eaafc8);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+.card h2{
+  font-family: 'Roboto', sans-serif;
+}
+
 .blog{
   margin-left: 15%;
   margin-right: 15%;
   padding-top: 30px;
+
 }
 /* Header/Blog Title */
 .header {
   padding-top: 30px;
   font-size: 40px;
   text-align: center;
-  background: white;
+  color: white;
+
 
 }
 
@@ -48,6 +56,13 @@ body {
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+}
+
+#card-t{
+  background: rgba(245,245,245,0.6);
+  border-radius: 12px;
+  border: 0px;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.15);
 }
 
 /* Clear floats after the columns */
@@ -127,6 +142,12 @@ body {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .addbutton:hover .dropbtn {background-color: #914791;}
+
+#background {
+    height: 400px;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom, #654ea3, #eaafc8); /* Standard syntax (must be last) */
+}
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
