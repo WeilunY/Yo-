@@ -30,7 +30,7 @@ body,
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
     text-align: center;
-
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
     border-radius: 50px;
@@ -57,7 +57,7 @@ body,
 
 /* Add a background color on hover */
 .button button:hover {
-    background-color: #E68DE8;
+    background-color: #914791;
 }
 
 
@@ -208,6 +208,11 @@ p { margin: 0; }
 	color: #fff;
 	cursor: pointer;
 	padding: 16px 24px;
+}
+
+#live-chat header:hover{
+  background: #6F366F;
+  }
 }
 
 #live-chat h4:before {
