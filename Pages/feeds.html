@@ -123,37 +123,63 @@
     <a onclick="appendCard()">New Sample Post </a>
   </div>
 </div>
+<!-- Control buttons -->
+<h3> Filter </h3>
+<div id="myBtnContainer">
+  <button class="btn btn-outline-dark" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn btn-outline-dark" onclick="filterSelection('general')"> General</button>
+  <button class="btn btn-outline-dark" onclick="filterSelection('academic')"> Academic</button>
+  <button class="btn btn-outline-dark" onclick="filterSelection('event')"> Event</button>
+  <button class="btn btn-outline-dark" onclick="filterSelection('thought')"> Thought</button>
+</div>
+
 <div class="row">
   <div class="leftcolumn">
-    <div class="card" id="card-t">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+    <div class="filter general">
+      <div class="card" id="card-t">
+        <h2>TITLE HEADING General</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+      </div>
     </div>
-    <div class="card" id="card-t">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+    <div class="filter academic">
+      <div class="card" id="card-t">
+        <h2>TITLE HEADING Academic</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+      </div>
     </div>
-    <div class="card" id="card-t">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+    <div class="filter thought">
+      <div class="card" id="card-t">
+        <h2>TITLE HEADING Thought</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+      </div>
     </div>
-    <div class="card" id="card-t">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+    <div class="filter event">
+      <div class="card" id="card-t">
+        <h2>TITLE HEADING Event</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+      </div>
+    </div>
+    <div class="filter general">
+      <div class="card" id="card-t">
+        <h2>TITLE HEADING General</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+      </div>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card" id="card-t">
       <h2>Your Status</h2>
-      <div class="fakeimg" style="height:100px; width:100px ;border-radius: 100px; margin-left:100px; margin-top: 20px;"></div>
+      <div class="fakeimg" style="height:100px; width:100px ;border-radius: 100px; margin-left:20%; margin-top: 20px;"></div>
       <p style="margin-top: 20px;">Some text about me in culpa qui officia deserunt mollit anim..</p>
     </div>
     <div class="card" id="card-t">
@@ -287,4 +313,5 @@ $('.chat-close').on('click', function(e) {
 }) ();
 
 </script>
+
 </html>

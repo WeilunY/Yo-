@@ -9,6 +9,20 @@ body {
 .card h2{
   font-family: 'Roboto', sans-serif;
   color: #4d194d;
+
+}
+
+.filter{
+  display: none;
+}
+
+.show {
+    display: block;
+}
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
 }
 
 .blog{
