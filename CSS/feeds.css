@@ -93,6 +93,15 @@ body {
 }
 
 
+
+#myBtn{
+  width: 95%;
+  margin: auto;
+}
+.bgroup{
+  margin-top: 14px;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
