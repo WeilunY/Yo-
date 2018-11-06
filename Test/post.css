@@ -1,0 +1,25 @@
+.topbar{
+  height: 50px;
+  width: 100%;
+  background: #602060;;
+  padding-top: 10px;
+  padding-left: 16px;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+}
+
+.back{
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.create{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 80px;
+}
+
+form{
+  margin-top: 40px;
+}
