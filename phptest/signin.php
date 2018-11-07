@@ -34,7 +34,9 @@ require '../includes/form_handler/login_handler.php';
       </label>
     </div>
     <input class="btn btn-primary btn-lg btn-block" type="submit" name="login_button" value="Login">
-
+    <?php if(in_array("Email or password was incorrect<br>", $error_array)){
+      echo "Email or password was incorrect<br>";
+    } ?>
   </form>
   <a href="register.php">
     <button class="btn btn-secondary btn-block" style="margin-left: 40%;width:220px;">Sign Up</button>
