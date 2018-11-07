@@ -17,7 +17,8 @@
 
     <div class="container" style=" max-width: 1000px; margin: auto; margin-top: 60px;">
       <h2> Sign Up For Yo! </h2>
-      <form action="register.php" method="POST">
+
+      <form action="register.php" method="POST" style="margin-top: 40px;">
 
         <div class="form-group row">
            <label for="inputfname" class="col-sm-2 col-form-label">First Name</label>
@@ -111,7 +112,6 @@
             <label for="inputpassword2" class="col-sm-2 col-form-label">Confirm Password</label>
             <div class="col-sm-10">
               <input type="password" name="reg_password2" placeholder="Confirm Password" class="form-control" id="inputpassword2" required>
-              <br>
               <?php if(in_array("Your passwords do not match <br>", $error_array)){
                 echo "Your passwords do not match <br>";
               }
@@ -124,14 +124,11 @@
             </div>
           </div>
 
-        <div class="form-group row">
-          <div class="col-sm-10">
-            <input type="submit" name="register_button" class="btn btn-primary btn-block" value="Sign Up">
-            <?php if(in_array("<span style='color: #602060;'>You're all set! Goahead and login!</span><br>", $error_array)){
-              echo "<span style='color: #602060;'>You're all set! Goahead and login!</span><br>";
-            } ?>
-          </div>
-        </div>
+          <input type="submit" name="register_button" class="btn btn-primary btn-block" value="Sign Up">
+          <?php if(in_array("<span style='color: #602060;'>You're all set! Goahead and login!</span><br>", $error_array)){
+            echo "<span style='color: #602060;'>You're all set! Goahead and login!</span><br>";
+          } ?>
+
 
       </form>
     </div>
