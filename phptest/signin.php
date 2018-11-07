@@ -1,34 +1,43 @@
 <?php
 require '../config/config.php';
-
+require '../includes/form_handler/register_handler.php';
+require '../includes/form_handler/login_handler.php';
 ?>
 
 <html lang = "en-US">
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="CSS/signin.css" rel="stylesheet">
+  <link href="../CSS/signin.css" rel="stylesheet">
+  <title> Yo! | Sign In </title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #602060; position: fixed; top:0px; right:0px; width:100%;">
-    <a class="navbar-brand"><img src="logo/yo_v1-01.svg"width="35" height="35" alt="YO!"></a>
+    <a class="navbar-brand"><img src="../logo/yo_v1-01.svg"width="35" height="35" alt="YO!"></a>
   </nav>
 <div class="container">
 
-  <form class="form-signin" style="margin-top: 30px;">
+  <form = "signin.php" method = "POST" class="form-signin" style="margin-top: 30px;">
     <h2 class="form-signin-heading">Please sign in</h2>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="email" id="inputEmail" name="log_email" class="form-control" placeholder="Email address" value="<?php
+    if(isset($_SESSION['log_email'])){
+        echo $_SESSION['log_email'];
+      }
+    ?>" required autofocus>
+
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" id="inputPassword" name="log_password" class="form-control" placeholder="Password"required>
+
     <div class="checkbox">
       <label>
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
+    <input class="btn btn-primary btn-lg btn-block" type="submit" name="login_button" value="Login">
 
   </form>
-  <a href="Pages/feeds.html">
-    <button class="btn btn-lg btn-primary btn-block" style="background-color: #602060; border: 0px; margin-left: 40%;width:220px;;">Sign in</button>
+  <a href="register.php">
+    <button class="btn btn-secondary btn-block" style="margin-left: 40%;width:220px;">Sign Up</button>
   </a>
 
 
