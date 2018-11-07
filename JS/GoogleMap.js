@@ -172,7 +172,7 @@ function initAutocomplete() {
 function initAutocomplete_current() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 32.88, lng: -117.23},
-    zoom: 13,
+    zoom: 16,
     styles:[
     {
         "featureType": "road",
@@ -284,9 +284,11 @@ function initAutocomplete_current() {
       };
 
       infoWindow.setPosition(pos);
-      infoWindow.setContent('YOU ARE HERE :)');
+      infoWindow.setContent('<i class="fas fa-smile"></i>');
       infoWindow.open(map);
+
       map.setCenter(pos);
+
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
