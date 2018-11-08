@@ -12,6 +12,10 @@ body {
 
 }
 
+.comment{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 .filter{
   display: none;
 }

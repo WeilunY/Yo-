@@ -57,52 +57,52 @@
             <a class="dropdown-item" href="#">More</a>
             <div class="dropdown-divider"></div>
 <!--
-            <a class="dropdown-header">Map</a>
-            <a class="dropdown-item" href="#">Customization</a>
-            <div class="dropdown-divider"></div>
--->
-            <a class="dropdown-header">Security and Feedback</a>
-            <a class="dropdown-item" href="#">Privacy</a>
-            <a class="dropdown-item" href="#">Support Center</a>
-            <a class="dropdown-item" href="#">Term and License</a>
-            <a class="dropdown-item" href="#">Privacy Policy</a>
-            <div class="dropdown-divider"></div>
+              <a class="dropdown-header">Map</a>
+              <a class="dropdown-item" href="#">Customization</a>
+              <div class="dropdown-divider"></div>
+  -->
+              <a class="dropdown-header">Security and Feedback</a>
+              <a class="dropdown-item" href="#">Privacy</a>
+              <a class="dropdown-item" href="#">Support Center</a>
+              <a class="dropdown-item" href="#">Term and License</a>
+              <a class="dropdown-item" href="#">Privacy Policy</a>
+              <div class="dropdown-divider"></div>
 
-            <a class="btn btn-danger" href="../index.html"style="margin-left: 27.5%; color:white;">Log Out</a>
+              <a class="btn btn-danger" href="../index.html"style="margin-left: 27.5%; color:white;">Log Out</a>
 
+            </div>
+          </li>
+
+        </ul>
+              <!--
+              <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 15px;">
+              <i class="fas fa-sign-in-alt"></i> Sign in
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+            <form class="px-4 py-3">
+              <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                <label class="form-check-label" for="dropdownCheck">
+                  Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top:15px; width: 100%;"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">New around here? Sign Up</a>
+            <a class="dropdown-item" href="#">Forgot password?</a>
           </div>
-        </li>
-
-      </ul>
-      <!--
-      <div class="btn-group">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 15px;">
-      <i class="fas fa-sign-in-alt"></i> Sign in
-    </button>
-    <div class="dropdown-menu dropdown-menu-right">
-    <form class="px-4 py-3">
-      <div class="form-group">
-        <label for="exampleDropdownFormEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+        </div>-->
       </div>
-      <div class="form-group">
-        <label for="exampleDropdownFormPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-        <label class="form-check-label" for="dropdownCheck">
-          Remember me
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary" style="margin-top:15px; width: 100%;"><i class="fas fa-sign-in-alt"></i> Sign in</button>
-    </form>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">New around here? Sign Up</a>
-    <a class="dropdown-item" href="#">Forgot password?</a>
-  </div>
-</div>-->
-    </div>
   </nav>
   <!-- end of nav -->
 
@@ -143,7 +143,8 @@
   <div class="leftcolumn">
     <div class="card" id="card-t">
       <h2>My Profile</h2>
-      <div img class="fakeimg" style="min-height:100px; max-width:100px ;border-radius: 100px; margin:auto; margin-top: 20px;"></div>
+      <img src="../Asset/Images/profile_pics/head_wisteria.png" alt="Profile"
+      style="min-height:100px; max-width:100px ;border-radius: 100px; margin:auto; margin-top: 20px;">
       <hr>
       <p style="margin-top: 5px;">Name: William</p>
       <p style="margin-top: 5px;">Home: La Jolla</p>
@@ -172,12 +173,13 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(1)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
-          <button class="btn btn-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-primary"> <i class="fa fa-comment" onclick="typeComment()"></i> Comment </button>
+          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <div id="type1" style="display: none;">
+            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+          </div>
+          <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
-        <div id="type" style="display: none;">
-          This is my DIV element.
-        </div>
+
       </div>
     </div>
     <div class="filter academic">
@@ -191,8 +193,11 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(2)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
-          <button class="btn btn-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-primary"> <i class="fa fa-comment"></i> Comment </button>
+          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <div id="type2" style="display: none;">
+            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+          </div>
+          <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
@@ -207,8 +212,11 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more3" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(3)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
-          <button class="btn btn-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-primary"> <i class="fa fa-comment"></i> Comment </button>
+          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <div id="type3" style="display: none;">
+            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+          </div>
+          <button class="btn btn-outline-primary" onclick="typeComment(3)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
@@ -224,8 +232,11 @@
           venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(4)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
-          <button class="btn btn-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-primary"> <i class="fa fa-comment"></i> Comment </button>
+          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <div id="type4" style="display: none;">
+            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+          </div>
+          <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
@@ -241,8 +252,11 @@
           venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(5)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
-          <button class="btn btn-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-primary"> <i class="fa fa-comment"></i> Comment </button>
+          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <div id="type5" style="display: none;">
+            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+          </div>
+          <button class="btn btn-outline-primary" onclick="typeComment(5)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
@@ -373,6 +387,26 @@ $('.chat-close').on('click', function(e) {
 });
 
 }) ();
+
+
+$(document).ready(function() {
+  $('.btn-outline-success').click(function() {
+    $(this).toggleClass("active");
+  });
+});
+
+$(document).ready(function() {
+  $('.btn-outline-primary').click(function() {
+    $(this).toggleClass("active");
+  });
+});
+
+$(document).ready(function() {
+  $('.btn-outline-dark').click(function() {
+    $(this).toggleClass("active");
+  });
+});
+
 
 </script>
 

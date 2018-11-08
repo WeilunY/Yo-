@@ -1,6 +1,6 @@
 var number = 1;
 function appendCard() {
-  $(".leftcolumn").append( "<div class='card' id='card-t'>\
+  $(".midcolumn").append( "<div class='card' id='card-t'>\
     <h2>TITLE HEADING new" + " " + number +"</h2>\
     <h5>Title description, Dec 7, 2017</h5>\
     <div class='fakeimg' style='height:200px;'>Image</div>\
@@ -74,16 +74,7 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+
 
 
 // Show More
@@ -103,11 +94,16 @@ function showmore(num) {
   }
 }
 
-function typeComment() {
-    var x = document.getElementById("type");
+function typeComment(num) {
+    var x = document.getElementById("type" + num);
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
     }
 }
+
+$('.like').click(function() {
+    $(this).toggleClass('btn-outline-success');
+    $(this).toggleClass('btn-success');
+});
