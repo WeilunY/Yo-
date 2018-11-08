@@ -337,16 +337,15 @@ p { margin: 0; }
 .emoji-select {
     width: 40px;
     height: 40px;
-    border-style: solid;
-    border-width: 1.8px;
-    border-color: white;
+
     border-radius: 40px;
     overflow: hidden;
-    background: #602060 url("img/icon-select.png") no-repeat 90% 50%;
+    background: rgba(220,220,220,0.1);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
 }
 
 .emoji-select select {
-    padding: 9px 9px;
+    padding: 10px 10px;
     width: 100%;
     border: none;
     box-shadow: none;
