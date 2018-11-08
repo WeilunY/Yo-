@@ -169,7 +169,7 @@ function initAutocomplete() {
 }
 
 
-function initAutocomplete_current() {
+function initAutocomplete_current(emoji) {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 32.88, lng: -117.23},
     zoom: 16,
@@ -284,7 +284,7 @@ function initAutocomplete_current() {
       };
 
       infoWindow.setPosition(pos);
-      infoWindow.setContent('<i class="fas fa-smile"></i>');
+      infoWindow.setContent(emoji);
       infoWindow.open(map);
 
       map.setCenter(pos);

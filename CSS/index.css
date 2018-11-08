@@ -38,9 +38,10 @@ body,
     transition-duration: 0.4s;
     width: 80px;
     position: absolute;
-    bottom:2%;
+    bottom:4%;
     left:50%;
     z-index: 99;
+    min-height: 80px;
 }
 
 
@@ -58,6 +59,10 @@ body,
 /* Add a background color on hover */
 .button button:hover {
     background-color: #914791;
+}
+
+select{
+  height: 40px;
 }
 
 
