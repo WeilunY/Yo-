@@ -110,9 +110,11 @@
 <div id="map"></div>
 
 <div class = "button">
-  <button onclick="initAutocomplete_current('&#' + this.children[0].value)">
+  <button onclick="initAutocomplete_current('&#' + this.children[0].children[0].value)">
+    <label class="emoji-select">
      <select id="mySelect"></select>
-  </button>
+   </div>
+ </label>
 </div>
 
 
