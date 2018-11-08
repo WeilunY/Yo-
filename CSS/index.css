@@ -23,7 +23,7 @@ body,
 }
 /* buttons */
 .button button {
-    background-color: #602060; /* purple background */
+    background-color: rgba(96,32,96,0.95); /* purple background */
     border: 0px solid white;
     color: white; /* White text */
     padding: 20px;
