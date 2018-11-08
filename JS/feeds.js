@@ -102,3 +102,12 @@ function showmore(num) {
     moreText.style.display = "inline";
   }
 }
+
+function typeComment() {
+    var x = document.getElementById("type");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
