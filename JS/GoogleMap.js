@@ -111,7 +111,7 @@ function initMap() {
   var centerControl = new CenterControl(centerControlDiv, map);
 
   centerControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(centerControlDiv);
+  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
 
 
   // Create the search box and link it to the UI element.
@@ -183,15 +183,26 @@ function CenterControl(controlDiv, map) {
 
         // Set CSS for the control border.
         var controlUI = document.createElement('div');
-        controlUI.style.backgroundColor = '#fff';
-        controlUI.style.border = '2px solid #fff';
+        controlUI.style.backgroundColor = 'rgba(96,32,96,0.98)';
+        controlUI.style.border = '0px solid #fff';
         controlUI.style.borderRadius = '3px';
         controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
         controlUI.style.cursor = 'pointer';
-        controlUI.style.marginBottom = '22px';
+        controlUI.style.marginBottom = '60px';
         controlUI.style.textAlign = 'center';
+        controlUI.style.borderRadius = '60px';
         controlUI.title = 'Click to recenter the map';
+        controlUI.style.padding = '16px 16px 9px 16px';
+
         controlDiv.appendChild(controlUI);
+
+        var label = document.createElement('label');
+        label.style.width = '40px';
+        label.style.height = '40px';
+        label.style.borderRadius = '40px';
+        label.style.overflow = 'hidden';
+        label.style.background = 'rgba(220,220,220,0.2)';
+        controlUI.appendChild(label);
 
         var emojiList = document.createElement('select');
         var newOption;
@@ -208,10 +219,16 @@ function CenterControl(controlDiv, map) {
             emojiList.appendChild(newOption);
           }
         }
-        controlUI.style.padding = '20px 20px 20px 20px';
 
+        emojiList.style.padding = '10px 12px';
+        emojiList.style.width = '100%';
+        emojiList.style.border = 'none';
+        emojiList.style.boxShadow = 'none';
+        emojiList.style.background = 'transparent';
+        emojiList.style.backgroundImage = 'none';
+        emojiList.style.webkitAppearance = 'none';
 
-        controlUI.appendChild(emojiList);
+        label.appendChild(emojiList);
 
         // default emoji value
         var emoji = '&#' + emojiList.children[0].value;
@@ -244,135 +261,7 @@ function postEmoji(map, emoji){
       infoWindow.setContent(emoji);
       infoWindow.open(map);
 
-      map.setCenter(pos);
-
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-}
-
-
-function initAutocomplete_current(emoji) {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 32.88, lng: -117.23},
-    zoom: 16,
-    styles:[
-    {
-        "featureType": "road",
-        "stylers": [
-            {
-                "hue": "#5e00ff"
-            },
-            {
-                "saturation": -79
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "stylers": [
-            {
-                "saturation": -78
-            },
-            {
-                "hue": "#6600ff"
-            },
-            {
-                "lightness": -47
-            },
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "stylers": [
-            {
-                "lightness": 22
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "stylers": [
-            {
-                "hue": "#6600ff"
-            },
-            {
-                "saturation": -11
-            }
-        ]
-    },
-    {},
-    {},
-    {
-        "featureType": "water",
-        "stylers": [
-            {
-                "saturation": -65
-            },
-            {
-                "hue": "#1900ff"
-            },
-            {
-                "lightness": 8
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "stylers": [
-            {
-                "weight": 1.3
-            },
-            {
-                "lightness": 30
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "hue": "#5e00ff"
-            },
-            {
-                "saturation": -16
-            }
-        ]
-    },
-    {
-        "featureType": "transit.line",
-        "stylers": [
-            {
-                "saturation": -72
-            }
-        ]
-    },
-    {}
-]
-
-  });
-
-  infoWindow = new google.maps.InfoWindow;
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(emoji);
-      infoWindow.open(map);
+      map.setZoom(15);
 
       map.setCenter(pos);
 
@@ -383,14 +272,4 @@ function initAutocomplete_current(emoji) {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
-}
-
-
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
 }
