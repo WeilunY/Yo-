@@ -1,7 +1,7 @@
 
 var map, infoWindow;
 
-function initAutocomplete() {
+function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 32.88, lng: -117.23},
     zoom: 13,
@@ -107,6 +107,12 @@ function initAutocomplete() {
 
   });
 
+  var centerControlDiv = document.createElement('div');
+  var centerControl = new CenterControl(centerControlDiv, map);
+
+  centerControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(centerControlDiv);
+
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -166,6 +172,87 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
   });
+}
+
+var mySelect = document.getElementById('mySelect')
+var newOption;
+var emojRange = [
+  [128513, 128591] ,[9986,10160],[128640,128704]
+];
+function CenterControl(controlDiv, map) {
+
+        // Set CSS for the control border.
+        var controlUI = document.createElement('div');
+        controlUI.style.backgroundColor = '#fff';
+        controlUI.style.border = '2px solid #fff';
+        controlUI.style.borderRadius = '3px';
+        controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+        controlUI.style.cursor = 'pointer';
+        controlUI.style.marginBottom = '22px';
+        controlUI.style.textAlign = 'center';
+        controlUI.title = 'Click to recenter the map';
+        controlDiv.appendChild(controlUI);
+
+        var emojiList = document.createElement('select');
+        var newOption;
+        var emojRange = [
+          [128513, 128591] ,[9986,10160],[128640,128704]
+        ];
+        for (var i = 0; i < emojRange.length; i++) {
+          var range = emojRange[i];
+          for (var x = range[0]; x < range[1]; x++) {
+
+            newOption = document.createElement('option');
+            newOption.value = x;
+            newOption.innerHTML = "&#" + x + ";";
+            emojiList.appendChild(newOption);
+          }
+        }
+        controlUI.style.padding = '20px 20px 20px 20px';
+
+
+        controlUI.appendChild(emojiList);
+
+        // default emoji value
+        var emoji = '&#' + emojiList.children[0].value;
+
+        // Change emoji value if the select has changed
+        $(emojiList).on('change', function(){
+          var num = $(this).val();
+          emoji = '&#' +  num;
+
+        });
+
+        // Setup the click event listeners: post emoji
+        controlUI.addEventListener('click', function() {
+          postEmoji(map, emoji);
+        });
+      }
+
+function postEmoji(map, emoji){
+
+
+  infoWindow = new google.maps.InfoWindow;
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent(emoji);
+      infoWindow.open(map);
+
+      map.setCenter(pos);
+
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
 }
 
 
