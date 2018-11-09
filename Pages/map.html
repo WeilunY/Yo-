@@ -226,27 +226,5 @@ $('.chat-close').on('click', function(e) {
 
 }) ();
 </script>
-<script>
-var mySelect = document.getElementById('mySelect')
-var newOption;
-var emojRange = [
-  [128513, 128591] ,[9986,10160],[128640,128704]
-];
-//inside array define range arrays.
-//1st array : Emoticons icons
-//2nd range : Dingbats.
-//3rd range : Transport and map symbols
-for (var i = 0; i < emojRange.length; i++) {
-  var range = emojRange[i];
-  for (var x = range[0]; x < range[1]; x++) {
-
-    newOption = document.createElement('option');
-    newOption.value = x;
-    newOption.innerHTML = "&#" + x + ";";
-    mySelect.appendChild(newOption);
-  }
-
-}
-</script>
 </body>
 </html>
