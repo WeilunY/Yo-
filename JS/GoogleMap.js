@@ -174,11 +174,7 @@ function initMap() {
   });
 }
 
-var mySelect = document.getElementById('mySelect')
-var newOption;
-var emojRange = [
-  [128513, 128591] ,[9986,10160],[128640,128704]
-];
+
 function CenterControl(controlDiv, map) {
 
         // Set CSS for the control border.
