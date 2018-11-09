@@ -5,6 +5,21 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 32.88, lng: -117.23},
     zoom: 13,
+
+    mapTypeControl: true,
+    mapTypeControlOptions: { position: google.maps.ControlPosition.LEFT_BOTTOM },
+
+    zoomControl: true,
+    zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER },
+
+    scaleControl: true,
+
+    streetViewControl: true,
+    streetViewControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER },
+
+    fullscreenControl: true,
+    fullscreenControlOptions:{ position: google.maps.ControlPosition.LEFT_CENTER},
+
     styles:[
     {
         "featureType": "road",
@@ -244,8 +259,8 @@ function CenterControl(controlDiv, map) {
 
 function postEmoji(map, emoji){
 
-
   infoWindow = new google.maps.InfoWindow;
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -255,6 +270,7 @@ function postEmoji(map, emoji){
 
       infoWindow.setPosition(pos);
       infoWindow.setContent(emoji);
+
       infoWindow.open(map);
 
       map.setZoom(15);
