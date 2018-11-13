@@ -1,10 +1,46 @@
 
 var map, infoWindow;
 
+var minLong = 32.87025;
+var maxLong = 32.89156;
+var minLat = -117.24412;
+var maxLat = -117.22909;
+var start = 128513;
+var end = 128591;
+
+function getRandomInRange(from, to, fixed) {
+    return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+}
+
+function getRandomEmoji(start, end){
+  return "&#" + (Math.random() * (start - end) + end).toFixed();
+}
+
+function getRandomEmojiList(num){
+  var emojis = [];
+  for(var i = 1; i <= num + 1; i++){
+    var single = [];
+    var emoji = getRandomEmoji(start, end);
+    single.push(emoji);
+    var long = getRandomInRange(minLong, maxLong, 6);
+    single.push(long);
+    var lat = getRandomInRange(minLat, maxLat, 6);
+    single.push(lat);
+    single.push(i);
+    emojis.push(single);
+  }
+  return emojis;
+}
+
+
+
 function initMap() {
+
+  var emojis = getRandomEmojiList(50);
   var map = new google.maps.Map(document.getElementById('map'), {
+
     center: {lat: 32.88, lng: -117.23},
-    zoom: 13,
+    zoom: 15,
 
     mapTypeControl: true,
     mapTypeControlOptions: { position: google.maps.ControlPosition.LEFT_BOTTOM },
@@ -187,6 +223,25 @@ function initMap() {
     });
     map.fitBounds(bounds);
   });
+
+  // Set emoji on to location
+  var info = new google.maps.InfoWindow();
+
+  var marker, i;
+
+    for (i = 0; i < emojis.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(emojis[i][1], emojis[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          info.setContent(emojis[i][0]);
+          info.open(map, marker);
+        }
+      })(marker, i));
+    }
 }
 
 
