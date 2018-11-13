@@ -316,6 +316,9 @@ function postEmoji(map, emoji){
 
   infoWindow = new google.maps.InfoWindow;
 
+  var marker;
+
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -323,10 +326,23 @@ function postEmoji(map, emoji){
         lng: position.coords.longitude
       };
 
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(emoji);
+      marker = new google.maps.Marker({
+        position: pos,
+        map: map
+      });
 
-      infoWindow.open(map);
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+
+      google.maps.event.addListener(marker, 'click', (function(marker) {
+        return function() {
+          infoWindow.setContent(emoji);
+          infoWindow.open(map, marker);
+        }
+      })(marker));
+
+      marker.addListener("dblclick", function() {
+        marker.setMap(null);
+      });
 
       map.setZoom(15);
 
@@ -340,6 +356,8 @@ function postEmoji(map, emoji){
     handleLocationError(false, infoWindow, map.getCenter());
   }
 }
+
+
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
