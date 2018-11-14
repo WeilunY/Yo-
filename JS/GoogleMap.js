@@ -5,7 +5,7 @@ var minLong = 32.87025;
 var maxLong = 32.89156;
 var minLat = -117.24412;
 var maxLat = -117.22909;
-var start = 128513;
+var start = 128512;
 var end = 128591;
 
 function getRandomInRange(from, to, fixed) {
@@ -273,7 +273,7 @@ function CenterControl(controlDiv, map) {
         var emojiList = document.createElement('select');
         var newOption;
         var emojRange = [
-          [128513, 128591] ,[9986,10160],[128640,128704]
+          [128512, 128591]
         ];
         for (var i = 0; i < emojRange.length; i++) {
           var range = emojRange[i];
