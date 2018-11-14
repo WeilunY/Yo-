@@ -5,15 +5,15 @@ var minLong = 32.87025;
 var maxLong = 32.89156;
 var minLat = -117.24412;
 var maxLat = -117.22909;
-var start = 128512;
-var end = 128591;
+var start = 600;
+var end = 644;
 
 function getRandomInRange(from, to, fixed) {
     return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
 }
 
 function getRandomEmoji(start, end){
-  return "&#" + (Math.random() * (start - end) + end).toFixed();
+  return  (Math.random() * (start - end) + end).toFixed();
 }
 
 function getRandomEmojiList(num){
@@ -21,11 +21,12 @@ function getRandomEmojiList(num){
   for(var i = 1; i <= num + 1; i++){
     var single = [];
     var emoji = getRandomEmoji(start, end);
-    single.push(emoji);
+    single.push("&#x1F" + emoji);
     var long = getRandomInRange(minLong, maxLong, 6);
     single.push(long);
     var lat = getRandomInRange(minLat, maxLat, 6);
     single.push(lat);
+    single.push('1f' + emoji + '.png');
     single.push(i);
     emojis.push(single);
   }
@@ -226,13 +227,15 @@ function initMap() {
 
   // Set emoji on to location
   var info = new google.maps.InfoWindow();
+  var iconpath = "../Asset/emoji/";
 
   var marker, i;
 
     for (i = 0; i < emojis.length; i++) {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(emojis[i][1], emojis[i][2]),
-        map: map
+        map: map,
+        icon: iconpath + emojis[i][3]
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -273,7 +276,7 @@ function CenterControl(controlDiv, map) {
         var emojiList = document.createElement('select');
         var newOption;
         var emojRange = [
-          [128512, 128591]
+          [600, 644]
         ];
         for (var i = 0; i < emojRange.length; i++) {
           var range = emojRange[i];
@@ -281,7 +284,7 @@ function CenterControl(controlDiv, map) {
 
             newOption = document.createElement('option');
             newOption.value = x;
-            newOption.innerHTML = "&#" + x + ";";
+            newOption.innerHTML = "&#x1F" + x + ";";
             emojiList.appendChild(newOption);
           }
         }
@@ -297,12 +300,12 @@ function CenterControl(controlDiv, map) {
         label.appendChild(emojiList);
 
         // default emoji value
-        var emoji = '&#' + emojiList.children[0].value;
+        var emoji =  emojiList.children[0].value;
 
         // Change emoji value if the select has changed
         $(emojiList).on('change', function(){
           var num = $(this).val();
-          emoji = '&#' +  num;
+          emoji =  num;
 
         });
 
@@ -326,16 +329,19 @@ function postEmoji(map, emoji){
         lng: position.coords.longitude
       };
 
+      var iconpath = "../Asset/emoji/";
+
       marker = new google.maps.Marker({
         position: pos,
-        map: map
+        map: map,
+        icon: iconpath + '1f' + emoji + '.png'
       });
 
       marker.setAnimation(google.maps.Animation.BOUNCE);
 
       google.maps.event.addListener(marker, 'click', (function(marker) {
         return function() {
-          infoWindow.setContent(emoji);
+          infoWindow.setContent("&#x1F" + emoji);
           infoWindow.open(map, marker);
         }
       })(marker));
