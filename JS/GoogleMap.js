@@ -37,11 +37,11 @@ function getRandomEmojiList(num){
 
 function initMap() {
 
-  var emojis = getRandomEmojiList(50);
+  var emojis = getRandomEmojiList(100);
   var map = new google.maps.Map(document.getElementById('map'), {
 
     center: {lat: 32.88, lng: -117.23},
-    zoom: 15,
+    zoom: 15.5,
 
     mapTypeControl: true,
     mapTypeControlOptions: { position: google.maps.ControlPosition.LEFT_BOTTOM },
