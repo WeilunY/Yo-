@@ -97,7 +97,7 @@
   <button onclick="showHidden()" class="dropbtn" style="color: white; font-size:30px;"><i class="fas fa-plus"></i></button>
   <div id="myDropdown" class="dropdown-content">
     <b><i class="fas fa-edit"></i> Post to</b>
-    <a href="../Test/post-general.html"><i class="fas fa-campground"></i> General</a>
+    <a onclick="openPost()"><i class="fas fa-campground"></i> General</a>
     <a href="../Test/post-academic.html"><i class="fas fa-book"></i> Academic</a>
     <a href="../Test/post-event.html"><i class="fas fa-hat-wizard"></i> Event</a>
     <a href="../Test/post-thought.html"><i class="fas fa-lightbulb"></i> Thought</a>
@@ -142,14 +142,14 @@
 
   </div>
 
-  <div class="midcolumn">
+  <div class="midcolumn" id="midpost">
     <div class="filter general">
       <div class="card" id="card-t">
         <div id="container">
         <img src="../Asset/general.svg" width="35" height="35" align="left" style="margin-right: 20px;"/>
         <h2>TITLE HEADING General</h2>
       </div>
-        <h7 style="color: grey;">3 min</h7>
+        <h7 style="color: grey;">3 min ago</h7>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(1)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
@@ -159,7 +159,6 @@
           </div>
           <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
-
       </div>
     </div>
     <div class="filter academic">
@@ -477,25 +476,26 @@
     <form>
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="title" class="form-control" id="title">
+      <input type="title" class="form-control" id="general-title">
     </div>
 
     <div class="form-group">
       <label for="subject">Subject</label>
-      <textarea class="form-control" id="content" rows="1"></textarea>
+      <textarea class="form-control" id="general-subject" rows="1"></textarea>
     </div>
 
     <div class="form-group">
       <label for="content">Content</label>
-      <textarea class="form-control" id="content" rows="10"></textarea>
+      <textarea class="form-control" id="general-content" rows="10"></textarea>
     </div>
 
     <div class="form-group">
       <label for="file">File</label>
       <input type="file" class="form-control-file" id="file">
     </div>
-    <a href="../Pages/feeds.html">
-      <input class="btn btn-primary" value="Post"></input>
+    <input class="btn btn-primary" value="Post" id="general-post"></input>
+    <a onclick="closePost()">
+      <input class="btn btn-danger" value="Close"></input>
     </a>
     </form>
   </div>
@@ -548,31 +548,6 @@ $(document).ready(function() {
   });
 });
 </script>
-
-<script>
-
-// Post msg to people around you
-$('#postNear').keypress(function(event) {
-  if (event.keyCode == 13 || event.which == 13) {
-    if (!$('#postNear').val()) {
-      alert("No Text");
-    } else {
-     var text = $('#postNear').val();
-     $('.chat-history').prepend("<div class='chat-message clearfix'>\
-        <img src='../Asset/Images/profile_pics/head_wisteria.png' width='32' height='32'>\
-        <div class='chat-message-content clearfix'>\
-        <span class='chat-time'>now</span>\
-        <h5>You</h5>\
-        <p> " + text + "<p></div></div> <hr>");
-
-    $('#postNear').val("");
-
-    }
-  }
-});
-
-</script>
-
 
 </body>
 </html>
