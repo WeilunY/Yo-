@@ -254,8 +254,7 @@ function initMap() {
           info.setContent('<h3 style="font-size: 21px;">' + emojis[i][0]+'  '+ emojis[i][4] + '<h3>' +
                     '<p style="font-size: 15px;">' + emojis[i][5] + '<p>' +
                   '<button class="btn btn-outline-secondary" onclick="openFeeds()"><i class="fas fa-rss-square"></i> View in Feed </button>' +
-                  '<a href = "chat.html">' +
-                '<button class = "btn btn-success" style="margin-left: 20px;"> <i class="fas fa-comments"></i> Chat </button></a>');
+                '<button class = "btn btn-success" style="margin-left: 20px;" onclick="openChat()"> <i class="fas fa-comments"></i> Chat </button>');
           info.setOptions({maxWidth: 320});
           info.open(map, marker);
         }
