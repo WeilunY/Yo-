@@ -1,0 +1,37 @@
+.create{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 40px;
+}
+
+form{
+  margin-top: 40px;
+}
+
+.header{
+  margin-top: 80px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.nav-item{
+  font-weight: 600;
+}
+
+
+label{
+  font-weight: 500;
+}
+
+.createOverlay{
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  bottom: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  z-index: 6;
+  transition: 0.45s; /* 0.45 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  background-color: rgba(243, 243, 243, 0.95);
+  padding-top: 50px;
+}
