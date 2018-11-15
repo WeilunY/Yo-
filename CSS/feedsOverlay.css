@@ -7,8 +7,9 @@
     top: 20px;
     overflow-x: hidden; /* Disable horizontal scroll */
     z-index: 3;
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    transition: 0.45s; /* 0.45 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
     background-color: rgba(243, 243, 243, 0.95);
+
 }
 
 .openFeed{
@@ -74,7 +75,8 @@
 .blog{
   max-width: 1200px;
   margin: auto;
-  padding-top: 30px;
+  padding: 20px 20px 20px 20px;
+  padding-top: 40px;
 
 }
 /* Header/Blog Title */

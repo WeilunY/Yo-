@@ -8,6 +8,8 @@ var maxLat = -117.22909;
 var start = 600;
 var end = 644;
 
+var textPlaceholder = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel...";
+
 function getRandomInRange(from, to, fixed) {
     return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
 }
@@ -16,17 +18,26 @@ function getRandomEmoji(start, end){
   return  (Math.random() * (start - end) + end).toFixed();
 }
 
+// return sample: [emoji, long, lat, img, title, text, num]
 function getRandomEmojiList(num){
   var emojis = [];
   for(var i = 1; i <= num + 1; i++){
     var single = [];
+    // emoji
     var emoji = getRandomEmoji(start, end);
     single.push("&#x1F" + emoji);
+    // long and lat
     var long = getRandomInRange(minLong, maxLong, 6);
     single.push(long);
     var lat = getRandomInRange(minLat, maxLat, 6);
     single.push(lat);
+    // emoji img
     single.push('1f' + emoji + '.png');
+    // title
+    single.push('TITILE by xxx');
+    // content
+    single.push(textPlaceholder);
+    // num
     single.push(i);
     emojis.push(single);
   }
@@ -40,8 +51,8 @@ function initMap() {
   var emojis = getRandomEmojiList(100);
   var map = new google.maps.Map(document.getElementById('map'), {
 
-    center: {lat: 32.88, lng: -117.23},
-    zoom: 15.5,
+    center: {lat: 32.88, lng: -117.236},
+    zoom: 15.4,
 
     mapTypeControl: true,
     mapTypeControlOptions: { position: google.maps.ControlPosition.LEFT_BOTTOM },
@@ -240,7 +251,12 @@ function initMap() {
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          info.setContent(emojis[i][0]);
+          info.setContent('<h3 style="font-size: 21px;">' + emojis[i][0]+'  '+ emojis[i][4] + '<h3>' +
+                    '<p style="font-size: 15px;">' + emojis[i][5] + '<p>' +
+                  '<button class="btn btn-outline-secondary" onclick="openFeeds()"><i class="fas fa-rss-square"></i> View in Feed </button>' +
+                  '<a href = "chat.html">' +
+                '<button class = "btn btn-success" style="margin-left: 20px;"> <i class="fas fa-comments"></i> Chat </button></a>');
+          info.setOptions({maxWidth: 320});
           info.open(map, marker);
         }
       })(marker, i));
