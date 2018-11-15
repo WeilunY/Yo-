@@ -47,6 +47,8 @@ $('#postNear').keypress(function(event) {
   }
 });
 
+var numPost = 6;
+
 // Create a genral post
 $('#general-post').click(function(){
   var title = $('#general-title');
@@ -66,8 +68,19 @@ $('#general-post').click(function(){
     <p>" + content.val() + "</p>\
     <div align='right' class='bgroup'>\
     <button class='btn btn-outline-success'> <i class='fa fa-thumbs-up'></i> Like </button>\
+    <div id='type" + numPost  + "' style='display: none;'>\
+    <textarea class='form-control comment' id='content' rows='4' placeholder='Add your comment...''></textarea>\
+    </div>\
+    <button class='btn btn-outline-primary' onclick='typeComment( " + numPost + " )'> <i class='fa fa-comment'></i> Comment </button>\
     </div> </div> </div>");
+
+    numPost += 1;
+
     closePost();
+
+    title.val("");
+    subject.val("");
+    content.val("");
   }
 
 });
