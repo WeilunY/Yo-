@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>YO! | Map</title>
-<meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-<link rel="stylesheet" href = "../CSS/index.css">
-<link rel = "stylesheet" href = "../CSS/feedsOverlay.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link href="../CSS/chatOverlay.css" rel="stylesheet" >
+  <title>YO! | Map</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+  <link rel="stylesheet" href = "../CSS/index.css">
+  <link rel = "stylesheet" href = "../CSS/feedsOverlay.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="../CSS/chatOverlay.css" rel="stylesheet" >
 </head>
 <body>
 
@@ -257,20 +257,14 @@
 
 <div class="overlaychat" id="chat">
 <div class="messaging">
+  <button class="btn btn-outline-dark" onclick="closeChat()" style="margin-left: 20px; margin-bottom: 5px;"><i class="fas fa-times"></i> </button>
       <div class="inbox_msg">
         <div class="inbox_people">
           <div class="headind_srch">
             <div class="recent_heading">
-              <button class="btn btn-outline-light" onclick="closeChat()"><i class="fas fa-times"></i> </button></a>
-              <h4>Recent</h4>
+              <h4> Recent</h4>
             </div>
-            <div class="srch_bar">
-              <div class="stylish-input-group">
-                <input type="text" class="search-bar"  placeholder="Search" >
-                <span class="input-group-addon">
-                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                </span> </div>
-            </div>
+
           </div>
           <div class="inbox_chat">
             <div class="chat_list active_chat">
@@ -455,7 +449,7 @@ function closeFeeds() {
 
 /* Open when someone clicks on the span element */
 function openChat() {
-    document.getElementById("chat").style.width = "70%";
+    document.getElementById("chat").style.width = "80%";
 }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
