@@ -9,7 +9,7 @@
     z-index: 3;
     transition: 0.45s; /* 0.45 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
     background-color: rgba(243, 243, 243, 0.95);
-
+    overflow-y: scroll;
 }
 
 .openFeed{

@@ -98,9 +98,8 @@
   <div id="myDropdown" class="dropdown-content">
     <b><i class="fas fa-edit"></i> Post to</b>
     <a onclick="openPost()"><i class="fas fa-campground"></i> General</a>
-    <a href="../Test/post-academic.html"><i class="fas fa-book"></i> Academic</a>
-    <a href="../Test/post-event.html"><i class="fas fa-hat-wizard"></i> Event</a>
-    <a href="../Test/post-thought.html"><i class="fas fa-lightbulb"></i> Thought</a>
+    <a onclick="openPost1()"><i class="fas fa-book"></i> Academic</a>
+    <a onclick="openPost2()"><i class="fas fa-hat-wizard"></i> Event</a>
   </div>
 </div>
 <!-- Control buttons -->
@@ -116,7 +115,6 @@
       <a class="dropdown-item" onclick="filterSelection('general')"> General</a>
       <a class="dropdown-item" onclick="filterSelection('academic')"> Academic</a>
       <a class="dropdown-item" onclick="filterSelection('event')"> Event</a>
-      <a class="dropdown-item" onclick="filterSelection('thought')"> Thought</a>
 
 </div>
 
@@ -153,51 +151,35 @@
         <button class="btn btn-outline-dark" onclick="showmore(1)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
           <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
           <div id="type1" style="display: none;">
             <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
           </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
+
     <div class="filter academic">
       <div class="card" id="card-t">
         <div id="container">
         <img src="../Asset/academic.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
         <h2>TITLE HEADING Academic</h2>
       </div>
-        <h7 style="color: grey;">30 min</h7>
+        <h7 style="color: grey;">30 min ago</h7>
+        <h4> Subject: Cognitive Science</h4>
         <div class="fakeimg" style="height:200px;">Image</div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(2)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
           <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
           <div id="type2" style="display: none;">
             <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
           </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
-    <div class="filter thought">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/thought.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING Thought</h2>
-      </div>
-        <h7 style="color: grey;">November 7 at 16:40</h7>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more3" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark" onclick="showmore(3)" id="myBtn"> Read More </button>
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <div id="type3" style="display: none;">
-            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
-          </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(3)"> <i class="fa fa-comment"></i> Comment </button>
-        </div>
-      </div>
-    </div>
+
     <div class="filter event">
       <div class="card" id="card-t">
         <div id="container">
@@ -205,19 +187,22 @@
         <h2>TITLE HEADING Event</h2>
       </div>
         <h7 style="color: grey;">November 6 at 13:11 </h7>
+        <h4> Location @ Price Center</h4>
+        <h5> Date: 11/22/2018</h5>
         <div class="fakeimg" style="height:200px;">Image</div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more4" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
           venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
         <button class="btn btn-outline-dark" onclick="showmore(4)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
           <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
           <div id="type4" style="display: none;">
             <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
           </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
+
     <div class="filter general">
       <div class="card" id="card-t">
         <div id="container">
@@ -231,10 +216,10 @@
         <button class="btn btn-outline-dark" onclick="showmore(5)" id="myBtn"> Read More </button>
         <div align="right" class="bgroup">
           <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+          <button class="btn btn-outline-primary" onclick="typeComment(5)"> <i class="fa fa-comment"></i> Comment </button>
           <div id="type5" style="display: none;">
             <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
           </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(5)"> <i class="fa fa-comment"></i> Comment </button>
         </div>
       </div>
     </div>
@@ -261,7 +246,7 @@
       <div class="inbox_msg">
         <div class="inbox_people">
           <div class="headind_srch">
-            <div class="recent_heading">
+            <div class="recent_heading" style="color: white;">
               <button class="btn btn-outline-light" style="float: left;" onclick="closeChat()"><i class="fas fa-times"></i> </button></a>
               <h5 align="center">Recent</h5>
             </div>
@@ -388,6 +373,7 @@
       </div>
 
     </div></div>
+<!-- end of chat page -->
 
 <!-- nearby chat box -->
 <div id="live-chat">
@@ -469,18 +455,14 @@
 </div> <!-- end live-chat -->
 
 <!-- Create Post -->
-<div class="createOverlay" id="post">
+<!-- General -->
+<div class="createOverlay" id="generalPost">
   <div class="create">
     <h1>Create Your Post (General)</h1>
     <form>
     <div class="form-group">
       <label for="title">Title</label>
       <input type="title" class="form-control" id="general-title">
-    </div>
-
-    <div class="form-group">
-      <label for="subject">Subject</label>
-      <textarea class="form-control" id="general-subject" rows="1"></textarea>
     </div>
 
     <div class="form-group">
@@ -499,6 +481,84 @@
     </form>
   </div>
 </div>
+<!-- end of general-->
+
+<!-- Academic -->
+<div class="createOverlay" id="academicPost">
+  <div class="create">
+    <h1>Create Your Post (Academic)</h1>
+    <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="title" class="form-control" id="academic-title">
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <textarea class="form-control" id="academic-subject" rows="1"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea class="form-control" id="academic-content" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="file">File</label>
+      <input type="file" class="form-control-file" id="file">
+    </div>
+    <input class="btn btn-primary" value="Post" id="academic-post"></input>
+    <a onclick="closePost1()">
+      <input class="btn btn-danger" value="Close"></input>
+    </a>
+    </form>
+  </div>
+</div>
+
+<!-- end of academic -->
+
+<!-- Event -->
+<div class="createOverlay" id="eventPost">
+  <div class="create">
+    <h1>Create Your Post (Event)</h1>
+  <form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="title" class="form-control" id="event-title">
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location</label>
+    <textarea class="form-control" id="event-location" rows="1"></textarea>
+  </div>
+
+
+  <form method="post">
+   <div class="form-group"> <!-- Date input -->
+     <label for="time">Date</label>
+     <input class="form-control" id="event-date" placeholder="MM/DD/YYYY"/>
+   </div>
+  </form>
+
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="event-description" rows="10"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="file">File</label>
+    <input type="file" class="form-control-file" id="file">
+  </div>
+
+    <input class="btn btn-primary" value="Post" id="event-post"></input>
+    <a onclick="closePost2()">
+      <input class="btn btn-danger" value="Close"></input>
+    </a>
+  </form>
+  </div>
+</div>
+<!-- end of event -->
 
 
 <script src = "../JS/GoogleMap.js"></script>
