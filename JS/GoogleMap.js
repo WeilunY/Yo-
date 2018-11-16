@@ -255,7 +255,7 @@ function initMap() {
                     '<h4 style="font-size: 14px;"> by John Doe </h4>' +
                     '<h4 style="color: grey; font-size: 12px;">' + getRandomEmoji(2,80) +' mins ago </h4>' +
                     '<p style="font-size: 15px;">' + emojis[i][5] + '</p>' +
-                  '<button class="btn btn-outline-secondary" onclick="openFeeds()"><i class="fas fa-rss-square"></i> View in Feed </button>' +
+                  //'<button class="btn btn-outline-secondary" onclick="openFeeds()"><i class="fas fa-rss-square"></i> View in Feed </button>' +
                 '<button class = "btn btn-success" style="margin-left: 20px;" onclick="openChat()"> <i class="fas fa-comments"></i> Chat </button>');
           info.setOptions({maxWidth: 320});
           info.open(map, marker);
