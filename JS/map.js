@@ -78,7 +78,8 @@ $('#general-post').click(function(){
     <img src='../Asset/general.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
     <h2>" + title.val() + "</h2>\
     </div>\
-    <h7 style='color: grey;'>now</h7>\
+    <h6> by You </h6>\
+    <h7 style='color: grey; margin-bottom: 12px;'>now</h7>\
     <p>" + content.val() + "</p>\
     <div align='right' class='bgroup'>\
     <button class='btn btn-outline-success'> <i class='fa fa-thumbs-up'></i> Like </button>\
@@ -112,7 +113,8 @@ $('#academic-post').click(function(){
     <img src='../Asset/academic.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
     <h2>" + title.val() + "</h2>\
     </div>\
-    <h7 style='color: grey;'>now</h7>\
+    <h6> by You </h6>\
+    <h7 style='color: grey; margin-bottom: 12px;'>now</h7>\
     <h4> Subject: " + subject.val() + "</h4>\
     <p>" + content.val() + "</p>\
     <div align='right' class='bgroup'>\
@@ -149,7 +151,8 @@ $('#event-post').click(function(){
     <img src='../Asset/event.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
     <h2>" + title.val() + "</h2>\
     </div>\
-    <h7 style='color: grey;'>now</h7>\
+    <h6> by You </h6>\
+    <h7 style='color: grey; margin-bottom: 12px;'>now</h7>\
     <h4> Location @  "+ location.val() + "</h4>\
     <h5> Date: "+ time.val() + "</h5>\
     <p>" + description.val() + "</p>\
