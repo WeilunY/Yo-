@@ -323,7 +323,10 @@ function CenterControl(controlDiv, map) {
         $(emojiList).on('change', function(){
           var num = $(this).val();
           emoji =  num;
-
+          if(confirm("Post &#x1F" + emoji +"?" )){
+            postEmoji(map, emoji);
+          }
+          
         });
 
         // Setup the click event listeners: post emoji
