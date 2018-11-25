@@ -1,0 +1,68 @@
+.signinOverlay{
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    z-index: 10;
+    transition: 0.45s; /* 0.45 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    background-color: rgba(243, 243, 243, 0.85);
+    overflow-y: scroll;
+}
+
+.signinContainer{
+  max-width: 660px;
+  max-height: 400px;
+  margin: auto;
+  margin-top: 15%;
+
+}
+
+.tutorialColumn{
+  float: left;
+  width: 50%;
+  height: 400px;
+  max-height: 400px;
+  background: white;
+}
+
+.signinColumn{
+  float: left;
+  width: 50%;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

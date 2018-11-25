@@ -42,6 +42,19 @@ function closePost2() {
   document.getElementById("eventPost").style.height = "0%";
 }
 
+function openSignin(){
+  document.getElementById("signin").style.height = "100%";
+}
+
+function closeSignin() {
+  closePost();
+  closePost1();
+  closePost2();
+  closeFeeds();
+  closeChat();
+  document.getElementById("signin").style.height = "0%";
+}
+
 
 // Post msg to people around you
 $('#postNear').keypress(function(event) {

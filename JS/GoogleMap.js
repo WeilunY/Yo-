@@ -62,8 +62,7 @@ function initMap() {
 
     scaleControl: true,
 
-    streetViewControl: true,
-    streetViewControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER },
+    streetViewControl: false,
 
     fullscreenControl: true,
     fullscreenControlOptions:{ position: google.maps.ControlPosition.LEFT_CENTER},
@@ -371,14 +370,16 @@ function postEmoji(map, emoji, title){
           infoWindow.setContent('<h3 style="font-size: 21px;">' + "&#x1F" + emoji + ' ' +  title + '</h3>'+
           '<h4 style="font-size: 14px;"> by You </h4>' +
           '<h4 style="color: grey; font-size: 12px;"> Just Now </h4>'
-
         );
           infoWindow.open(map, marker);
         }
       })(marker));
 
       marker.addListener("dblclick", function() {
-        marker.setMap(null);
+        if(confirm("Are you sure that you want to delete your post?")){
+          marker.setMap(null);
+        }
+
       });
 
       map.setZoom(15);
