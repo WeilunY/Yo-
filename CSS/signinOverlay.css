@@ -7,15 +7,15 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     z-index: 10;
     transition: 0.45s; /* 0.45 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-    background-color: rgba(243, 243, 243, 0.85);
+    background-color: rgba(250, 247, 255, 0.85);
     overflow-y: scroll;
 }
 
 .signinContainer{
-  max-width: 660px;
+  max-width: 700px;
   max-height: 400px;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 10%;
 
 }
 
@@ -30,6 +30,7 @@
 .signinColumn{
   float: left;
   width: 50%;
+  padding-left: 40px;
 }
 
 .form-signin {
