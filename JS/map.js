@@ -94,12 +94,6 @@ $('#general-post').click(function(){
     <h6> by You </h6>\
     <h7 style='color: grey; margin-bottom: 12px;'>now</h7>\
     <p>" + content.val() + "</p>\
-    <div align='right' class='bgroup'>\
-    <button class='btn btn-outline-success'> <i class='fa fa-thumbs-up'></i> Like </button>\
-    <button class='btn btn-outline-primary' onclick='typeComment( " + numPost + " )'> <i class='fa fa-comment'></i> Comment </button>\
-    <div id='type" + numPost  + "' style='display: none;'>\
-    <textarea class='form-control comment' id='content' rows='4' placeholder='Add your comment...''></textarea>\
-    </div>\
     </div> </div> </div>");
 
     numPost += 1;
@@ -130,12 +124,6 @@ $('#academic-post').click(function(){
     <h7 style='color: grey; margin-bottom: 12px;'>now</h7>\
     <h4> Subject: " + subject.val() + "</h4>\
     <p>" + content.val() + "</p>\
-    <div align='right' class='bgroup'>\
-    <button class='btn btn-outline-success'> <i class='fa fa-thumbs-up'></i> Like </button>\
-    <button class='btn btn-outline-primary' onclick='typeComment( " + numPost + " )'> <i class='fa fa-comment'></i> Comment </button>\
-    <div id='type" + numPost  + "' style='display: none;'>\
-    <textarea class='form-control comment' id='content' rows='4' placeholder='Add your comment...''></textarea>\
-    </div>\
     </div> </div> </div>");
 
     numPost += 1;
@@ -169,12 +157,6 @@ $('#event-post').click(function(){
     <h4> Location @  "+ location.val() + "</h4>\
     <h5> Date: "+ time.val() + "</h5>\
     <p>" + description.val() + "</p>\
-    <div align='right' class='bgroup'>\
-    <button class='btn btn-outline-success'> <i class='fa fa-thumbs-up'></i> Like </button>\
-    <button class='btn btn-outline-primary' onclick='typeComment( " + numPost + " )'> <i class='fa fa-comment'></i> Comment </button>\
-    <div id='type" + numPost  + "' style='display: none;'>\
-    <textarea class='form-control comment' id='content' rows='4' placeholder='Add your comment...''></textarea>\
-    </div>\
     </div> </div> </div>");
 
     numPost += 1;
