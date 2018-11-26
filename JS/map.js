@@ -43,16 +43,54 @@ function closePost2() {
 }
 
 function openSignin(){
-  document.getElementById("signin").style.height = "100%";
-}
-
-function closeSignin() {
   closePost();
   closePost1();
   closePost2();
   closeFeeds();
   closeChat();
-  document.getElementById("signin").style.height = "0%";
+  document.getElementById("signin").style.height = "100%";
+}
+
+var email = "";
+var password = "";
+
+function closeSignin() {
+  var error = "";
+  if(!$("#inputEmail").val()){
+    error = error + "Please fill in your email \n";
+  }
+
+  if(!$("#inputPassword").val()){
+    error = error + "Please fill in your password \n";
+  }
+
+  if(error != ""){
+    alert(error);
+  }
+
+  else{
+    document.getElementById("signin").style.height = "0%";
+    $("#inputEmail").val("");
+    $("#inputPassword").val("");
+  }
+}
+
+function openSignup(){
+  document.getElementById("signup").style.height = "100%";
+}
+
+function closeSignup(){
+  var error = "";
+
+  if(!$("#inputfname").val()){
+    error = error + "Please fill in your first name \n";
+  }
+
+  if(!$("#inputlname").val()){
+    error = error + "Please fill in your last name \n";
+  }
+
+  document.getElementById("signup").style.height = "0%";
 }
 
 // post comment
