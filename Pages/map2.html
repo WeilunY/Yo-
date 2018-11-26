@@ -183,14 +183,66 @@
         </div>
           <h6> by Jane Doe </h6>
           <h7 style="color: grey; margin-bottom: 12px;">3 min ago</h7>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-          <button class="btn btn-outline-dark" onclick="showmore(1)" id="myBtn"> Read More </button>
-          
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots1">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+          <button class="btn btn-outline-dark myBtn" onclick="showmore(1)" id="rm1"> Read More </button>
+
+          <div class="comments" id="comment1">
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> John Doe </p>
+                <p id="comment_stuff"> This is Nice, thank you :) </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_belize_hole.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> Jackson P. </p>
+                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+
+            <div id="hd1" style="display: none;">
+              <div class="a_comment" >
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_green_sea.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Katy Q. </p>
+                  <p id="comment_stuff"> Ha Ha Ha </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="a_comment">
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Peter M. </p>
+                  <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+            </div>
+          </div>
+
           <div align="right" class="bgroup">
+            <button class="btn btn-outline-secondary ldm" id="ldm1" onclick="showComments(1)"> Load More Comments </button>
             <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
             <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
             <div id="type1" style="display: none;">
-              <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+              <textarea class="form-control comment" id="c1" rows="4" placeholder="Add your comment..."></textarea>
+              <button class="btn btn-dark" onclick="postComment(1)">Post</button>
             </div>
           </div>
         </div>
@@ -206,13 +258,66 @@
           <h7 style="color: grey; margin-bottom: 12px;">30 min ago</h7>
           <h4> Subject: Cognitive Science</h4>
           <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-          <button class="btn btn-outline-dark" onclick="showmore(2)" id="myBtn"> Read More </button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots2">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+          <button class="btn btn-outline-dark myBtn" onclick="showmore(2)" id="rm2"> Read More </button>
+
+          <div class="comments" id="comment2">
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> John Doe </p>
+                <p id="comment_stuff"> This is Nice, thank you :) </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_belize_hole.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> Jackson P. </p>
+                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+
+            <div id="hd2" style="display: none;">
+              <div class="a_comment" >
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_green_sea.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Katy Q. </p>
+                  <p id="comment_stuff"> Ha Ha Ha </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="a_comment">
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Peter M. </p>
+                  <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+            </div>
+          </div>
+
           <div align="right" class="bgroup">
+            <button class="btn btn-outline-secondary ldm" id="ldm2" onclick="showComments(2)"> Load More Comments </button>
             <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
             <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
             <div id="type2" style="display: none;">
-              <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+              <textarea class="form-control comment" id="c2" rows="4" placeholder="Add your comment..."></textarea>
+              <button class="btn btn-dark" onclick="postComment(2)">Post</button>
             </div>
           </div>
         </div>
@@ -229,14 +334,67 @@
           <h4> Location @ Price Center</h4>
           <h5> Date: 11/22/2018</h5>
           <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more4" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots3">...</span><span id="more3" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
             venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-          <button class="btn btn-outline-dark" onclick="showmore(4)" id="myBtn"> Read More </button>
+          <button class="btn btn-outline-dark myBtn" onclick="showmore(3)" id="rm3"> Read More </button>
+
+          <div class="comments" id="comment3">
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> John Doe </p>
+                <p id="comment_stuff"> This is Nice, thank you :) </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_belize_hole.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> Jackson P. </p>
+                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+
+            <div id="hd3" style="display: none;">
+              <div class="a_comment" >
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_green_sea.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Katy Q. </p>
+                  <p id="comment_stuff"> Ha Ha Ha </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="a_comment">
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Peter M. </p>
+                  <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+            </div>
+          </div>
+
           <div align="right" class="bgroup">
+            <button class="btn btn-outline-secondary ldm" id="ldm3" onclick="showComments(3)"> Load More Comments </button>
             <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-            <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
-            <div id="type4" style="display: none;">
-              <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+            <button class="btn btn-outline-primary" onclick="typeComment(3)"> <i class="fa fa-comment"></i> Comment </button>
+            <div id="type3" style="display: none;">
+              <textarea class="form-control comment" id="c3" rows="4" placeholder="Add your comment..."></textarea>
+              <button class="btn btn-dark" onclick="postComment(3)">Post</button>
             </div>
           </div>
         </div>
@@ -251,14 +409,67 @@
           <h6> by John Doe </h6>
           <h7 style="color: grey; margin-bottom: 12px;">November 6 at 10:24</h7>
           <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more5" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots4">...</span><span id="more4" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
             venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-          <button class="btn btn-outline-dark" onclick="showmore(5)" id="myBtn"> Read More </button>
+          <button class="btn btn-outline-dark myBtn" onclick="showmore(4)" id="rm4"> Read More </button>
+
+          <div class="comments" id="comment4">
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> John Doe </p>
+                <p id="comment_stuff"> This is Nice, thank you :) </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <div class="a_comment">
+              <div class="person">
+                <img src="../Asset/Images/profile_pics/head_belize_hole.png"
+                style="height:45px; width:45px ;border-radius: 100px;">
+              </div>
+              <div class="comment_content">
+                <p id="comment_name"> Jackson P. </p>
+                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+
+            <div id="hd4" style="display: none;">
+              <div class="a_comment" >
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_green_sea.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Katy Q. </p>
+                  <p id="comment_stuff"> Ha Ha Ha </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="a_comment">
+                <div class="person">
+                  <img src="../Asset/Images/profile_pics/head_pete_river.png"
+                  style="height:45px; width:45px ;border-radius: 100px;">
+                </div>
+                <div class="comment_content">
+                  <p id="comment_name"> Peter M. </p>
+                  <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+            </div>
+          </div>
+
           <div align="right" class="bgroup">
+            <button class="btn btn-outline-secondary ldm" id="ldm4" onclick="showComments(1)"> Load More Comments </button>
             <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-            <button class="btn btn-outline-primary" onclick="typeComment(5)"> <i class="fa fa-comment"></i> Comment </button>
-            <div id="type5" style="display: none;">
-              <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+            <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
+            <div id="type4" style="display: none;">
+              <textarea class="form-control comment" id="c4" rows="4" placeholder="Add your comment..."></textarea>
+              <button class="btn btn-dark" onclick="postComment(4)">Post</button>
             </div>
           </div>
         </div>
