@@ -9,8 +9,37 @@ function closeFeeds() {
 }
 
 /* Open when someone clicks on the span element */
-function openChat() {
+function openChat(name) {
     document.getElementById("chat").style.width = "70%";
+
+    totalChat += 1;
+    currentChat = totalChat;
+
+    // create a chatlist var
+    $(".inbox_chat").prepend('<div class="chat_list" id="chat_name'+ totalChat +'">\
+    <div class="chat_people" onclick="switchChat('+ totalChat +')">\
+    <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>\
+    <div class="chat_ib">\
+    <h5>'+ name +'<span class="chat_date">Now</span></h5>\
+    <p>Now you can start chatting with '+ name +'</p>\
+    </div></div></div>'
+    );
+
+    // chat history
+    $(".mesgs").prepend('<div class="msg_history"  id="chat_history'+ totalChat +'">\
+    <div class="incoming_msg">\
+    <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>\
+    <div class="received_msg">\
+    <div class="received_withd_msg">\
+    <p>Now you can start chatting with '+name+'</p>\
+    <span class="time_date"> Now   |   Today</span></div>\
+    </div></div></div>');
+
+    switchChat(totalChat);
+}
+
+function openChat1(){
+  document.getElementById("chat").style.width = "70%";
 }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */

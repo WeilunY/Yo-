@@ -18,7 +18,11 @@ function getRandomEmoji(start, end){
   return  (Math.random() * (start - end) + end).toFixed();
 }
 
-// return sample: [emoji, long, lat, img, title, text, num]
+// Random names
+var names = ["John Doe", "Kamren Atkinson", "Jaylin Martin", "Justus Townsend", "Lilly Bryant", "Annie Obrien", "Austin Costa",
+"Kelvin Arias", "Cierra Fisher", "Ariel Moreno", "Dereon Fritz", "Ross Richards", "Noe Romero"];
+
+// return sample: [emoji, long, lat, img, title, name, num]
 function getRandomEmojiList(num){
   var emojis = [];
   for(var i = 1; i <= num + 1; i++){
@@ -35,8 +39,8 @@ function getRandomEmojiList(num){
     single.push('1f' + emoji + '.png');
     // title
     single.push('TITILE Lorem ipsum dolor sit amet, consectetur adipiscing elit....');
-    // content
-    single.push(textPlaceholder);
+    // name
+    single.push(names[getRandomEmoji(0, names.length - 1)]);
     // num
     single.push(i);
     emojis.push(single);
@@ -251,11 +255,9 @@ function initMap() {
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
           info.setContent('<h3 style="font-size: 21px;">' + emojis[i][0]+'  '+ emojis[i][4] + '</h3>' +
-                    '<h4 style="font-size: 14px;"> by John Doe </h4>' +
+                    '<h4 style="font-size: 14px;"> by '+ emojis[i][5] + ' </h4>' +
                     '<h4 style="color: grey; font-size: 12px;">' + getRandomEmoji(2,80) +' mins ago </h4>' +
-                    //'<p style="font-size: 15px;">' + emojis[i][5] + '</p>' +
-                  //'<button class="btn btn-outline-secondary" onclick="openFeeds()"><i class="fas fa-rss-square"></i> View in Feed </button>' +
-                '<button class = "btn btn-success" onclick="openChat()"> <i class="fas fa-comments"></i> Chat </button>');
+                '<button class = "btn btn-success" onclick="openChat('+ '\'' + emojis[i][5] + '\''+')"> <i class="fas fa-comments"></i> Chat </button>');
           info.setOptions({maxWidth: 320});
           info.open(map, marker);
         }

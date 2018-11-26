@@ -16,6 +16,25 @@ img{ max-width:100%;}
     padding-top: 50px;
 }
 
+.openChat{
+  position:fixed;
+  top: 140px;
+  right: 120px;
+  z-index: 2;
+  background-color: #602060; /* purple background */
+  border: 0px solid white;
+  color: white; /* White text */
+  padding: 8px;
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  border-radius: 50px;
+  width: 60px;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+}
+
 .inbox_people {
   background: #f8f8f8 none repeat scroll 0 0;
   float: left;
