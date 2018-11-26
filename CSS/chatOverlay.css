@@ -106,7 +106,12 @@ img{ max-width:100%;}
   padding: 30px 15px 0 25px;
   margin-left: 20px;
   width: 66%;
+  height: 100%;
 
+}
+
+.messaging{
+  height: 100%;
 }
 
  .sent_msg p {
@@ -131,7 +136,10 @@ img{ max-width:100%;}
   width: 100%;
 }
 
-.type_msg {border-top: 1px solid #c4c4c4;position: relative;}
+.type_msg {
+  border-top: 1px solid #c4c4c4;
+  position: relative;
+}
 .msg_send_btn {
   background: rgba(96,32,96,1) none repeat scroll 0 0;
   border: medium none;

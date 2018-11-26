@@ -233,3 +233,48 @@ $('#event-post').click(function(){
     content.val("");
   }
 });
+
+var totalChat = 2;
+var currentChat = 1;
+
+// Switch chat
+function switchChat(n){
+  currentChat = n;
+  // set current active
+  $("#chat_name" + n).addClass("active_chat");
+
+  // Remove active
+  for(i = 1; i <= totalChat; i++){
+    if(i != n && $("#chat_name" + i).hasClass("active_chat")){
+      $("#chat_name" + i).removeClass("active_chat");
+    }
+  }
+
+  $("#chat_history" + n).css("display","block");
+
+  for(i = 1; i <= totalChat; i++){
+    if (i != n){
+      $("#chat_history" + i).css("display","none");
+    }
+  }
+
+}
+
+// Send chat
+$(".write_msg").keypress(function(event) {
+  if (event.keyCode == 13 || event.which == 13) {
+    if(!$(".write_msg").val()){
+      alert("Please type your message");
+    } else {
+      var msg = $(".write_msg").val();
+      $("#chat_history" + currentChat).append(
+        '<div class="outgoing_msg">\
+          <div class="sent_msg">\
+          <p>' + msg + '</p>\
+            <span class="time_date"> Now    |    Today</span> </div>\
+            </div> </div>  '
+      );
+      $(".write_msg").val("");
+    }
+  }
+});
