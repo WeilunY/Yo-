@@ -64,10 +64,52 @@
   color: #602060;
 }
 
+.comments{
+  padding-top: 20px;
+}
+
+.a_comment{
+  width: 90%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.person{
+ float: left;
+ width: 10%;
+ align-items: center;
+
+}
+
+.comment_content{
+  float: left;
+  width: 90%;
+  background-color: rgba(225, 225, 225, 0.5);
+  border-radius: 14px;
+  padding: 8px 14px 8px 14px;
+}
+
+#comment_name{
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+
+#comment_stuff{
+  font-size: 14px;
+  margin-bottom: 0 !important;
+}
+
+ .ldm{
+   float: left;
+ }
+
+
 .comment{
   margin-top: 8px;
   margin-bottom: 8px;
 }
+
 .filter{
   display: none;
 }
@@ -152,7 +194,7 @@
 
 
 
-#myBtn{
+.myBtn{
   width: 95%;
   margin: auto;
 }

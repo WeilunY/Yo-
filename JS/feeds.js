@@ -79,9 +79,9 @@ function w3RemoveClass(element, name) {
 
 // Show More
 function showmore(num) {
-  var dots = document.getElementById("dots");
+  var dots = document.getElementById("dots"+num);
   var moreText = document.getElementById("more" + num);
-  var btnText = document.getElementById("myBtn");
+  var btnText = document.getElementById("rm" + num);
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
@@ -101,6 +101,19 @@ function typeComment(num) {
     } else {
         x.style.display = "none";
     }
+}
+
+function showComments(num) {
+  var x = document.getElementById("hd" + num);
+  var btnText = document.getElementById("ldm" + num);
+  if (x.style.display === "none") {
+      x.style.display = "block";
+      btnText.innerHTML = "View Less Comments";
+  } else {
+      x.style.display = "none";
+
+      btnText.innerHTML = "Load More Comments";
+  }
 }
 
 $('.like').click(function() {

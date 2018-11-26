@@ -55,6 +55,32 @@ function closeSignin() {
   document.getElementById("signin").style.height = "0%";
 }
 
+// post comment
+function postComment(num){
+  var id = "#c" + num;
+  var commentID = "#comment" + num;
+  if (!$(id).val()){
+    alert("No Comment")
+  } else {
+    var text = $(id).val();
+    if(confirm("Are you ready to post " + text + "?")){
+      $(commentID).prepend('<div class="a_comment">\
+      <div class="person">\
+      <img src="../Asset/Images/profile_pics/head_wisteria.png"\
+      style="height:45px; width:45px ;border-radius: 100px;">\
+      </div>\
+      <div class="comment_content">\
+        <p id="comment_name"> You </p>\
+        <p id="comment_stuff">' + text + '</p>\
+        </div>\
+        <div style="clear:both;"></div>\
+      </div>'
+      )
+
+      $(id).val("");
+  }
+  }
+}
 
 // Post msg to people around you
 $('#postNear').keypress(function(event) {
