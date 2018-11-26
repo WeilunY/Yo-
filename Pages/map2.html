@@ -173,6 +173,7 @@
 <!-- end of sign up -->
 
 <!-- Map -->
+<button onclick="openChat1()" class="openChat"> <i class="fas fa-comments"></i> </button>
 <button onclick="openFeeds()" class="openFeed"> <i class="fas fa-rss-square"></i> </button>
 
 <input id="pac-input" class="controls" type="text" placeholder="Search Map">
@@ -559,124 +560,76 @@
             </div>
           </div>
           <div class="inbox_chat">
-            <div class="chat_list active_chat">
-              <div class="chat_people">
+
+            <div class="chat_list active_chat" id="chat_name1">
+              <div class="chat_people" onclick="switchChat(1)">
                 <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>
                 <div class="chat_ib">
-                  <h5>John Doe<span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
+                  <h5>John Doe<span class="chat_date">Now</span></h5>
+                  <p>Now you can start chatting with John Doe</p>
                 </div>
               </div>
             </div>
-            <div class="chat_list">
-              <div class="chat_people">
+
+            <div class="chat_list" id="chat_name2">
+              <div class="chat_people" onclick="switchChat(2)">
                 <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>
                 <div class="chat_ib">
-                  <h5>John Doe<span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
+                  <h5>John Doe<span class="chat_date">Yesterday</span></h5>
+                  <p>What's up</p>
                 </div>
               </div>
             </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>John Doe<span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>John Doe<span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>John Doe<span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>John Doe<span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>John Doe<span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
+
+
           </div>
         </div>
         <div class="mesgs">
-          <div class="msg_history">
+          <div class="msg_history"  id="chat_history1">
             <div class="incoming_msg">
               <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
-                  <p>Test which is a new approach to have all
-                    solutions</p>
-                  <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                  <p>Now you can start chatting with John Doe</p>
+                  <span class="time_date"> Now   |   Today</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="msg_history" id="chat_history2" style="display: none;">
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Test 2</p>
+                  <span class="time_date"> 10:00 AM   |   Yesterday</span></div>
               </div>
             </div>
             <div class="outgoing_msg">
               <div class="sent_msg">
-                <p>Test which is a new approach to have all
-                  solutions</p>
-                <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-            </div>
-            <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p>Test, which is a new approach to have</p>
-                  <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
-              </div>
-            </div>
-            <div class="outgoing_msg">
-              <div class="sent_msg">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
-                <span class="time_date"> 11:01 AM    |    Today</span> </div>
-            </div>
-            <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
-                  <span class="time_date"> 11:01 AM    |    Today</span></div>
-              </div>
+                <p>What's up</p>
+                <span class="time_date"> 11:01 AM    |    Yesterday</span> </div>
             </div>
           </div>
           <div class="type_msg">
             <div class="input_msg_write">
               <input type="text" class="write_msg" placeholder="Type a message" />
-              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+              <!--<button class="msg_send_btn" type="button"><i class="fas fa-paper-plane"></i></button>-->
             </div>
           </div>
         </div>
+
+
+          <div class="msg_history" id="chat_history2">
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Test 2</p>
+                  <span class="time_date"> Now   |   Today</span></div>
+              </div>
+            </div>
+          </div>
+
       </div>
 
     </div></div>
