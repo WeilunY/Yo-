@@ -859,6 +859,12 @@ $('.chat-close').on('click', function(e) {
 $(document).ready(function() {
   $('.btn-outline-success').click(function() {
     $(this).toggleClass("active");
+    if ($(this).hasClass("active")) {
+      alert("You dislike the post");
+    } else {
+      alert("You like the post");
+    }
+    $(this).toggleClass("active");
   });
 });
 

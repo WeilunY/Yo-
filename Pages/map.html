@@ -426,7 +426,7 @@
         </div>
 
         <div align="right" class="bgroup">
-          <button class="btn btn-outline-secondary ldm" id="ldm4" onclick="showComments(1)"> Load More Comments </button>
+          <button class="btn btn-outline-secondary ldm" id="ldm4" onclick="showComments(4)"> Load More Comments </button>
           <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
           <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
           <div id="type4" style="display: none;">
@@ -761,12 +761,18 @@ $('.chat-close').on('click', function(e) {
 
 $(document).ready(function() {
   $('.btn-outline-success').click(function() {
+    if ($(this).hasClass("active")) {
+      alert("You dislike the post");
+    } else {
+      alert("You like the post");
+    }
     $(this).toggleClass("active");
   });
 });
 
 $(document).ready(function() {
   $('.btn-outline-primary').click(function() {
+
     $(this).toggleClass("active");
   });
 });
