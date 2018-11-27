@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>YO! | Justus Townsend</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="all" href="../CSS/styles.css">
+  <script type="text/javascript" src="../JS/jquery-1.10.2.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+</head>
+
+<body>
+<!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #602060;">
+    <a class="navbar-brand" style="font-weight:bold;" href="#">
+    <img src="../logo/yo_v1-01.svg"width="35" height="35" alt="YO!"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+        </li>
+      </ul>
+      <!--<a class="btn btn-primary" href="Pages/signin.html" role="button" style="margin-left: 15px;">Sign in</a>-->
+
+      <!--
+      <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 15px;">
+      <i class="fas fa-sign-in-alt"></i> Sign in
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+    <form class="px-4 py-3">
+      <div class="form-group">
+        <label for="exampleDropdownFormEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleDropdownFormPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">
+          Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top:15px; width: 100%;"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">New around here? Sign Up</a>
+    <a class="dropdown-item" href="#">Forgot password?</a>
+  </div>
+</div>-->
+    </div>
+  </nav>
+
+  <div id="w" style="margin-top:60px;">
+    <div id="content" class="clearfix">
+      <div id="userphoto"><img src="../Asset/Images/profile_pics/head_wisteria.png" alt="default avatar"></div>
+      <h1>Justus Townsend</h1>
+
+      <nav id="profiletabs">
+        <ul class="clearfix">
+          <li><a href="#bio" class="sel"><i class="fas fa-info-circle"></i> Intro</a></li>
+          <li><a href="#activity"><i class="fas fa-chart-line"></i> Activities</a></li>
+          <li><a href="chat.html"><i class="fas fa-chart-line"></i> Chat</a></li>
+        </ul>
+      </nav>
+
+      <section id="bio">
+        <p>Various content snippets courtesy of <a href="http://bluthipsum.com/">Bluth Ipsum</a>.</p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+
+      <section id="activity" class="hidden">
+        <p>Most recent actions:</p>
+
+        <p class="activity">Nov 25 - Added <strong>Lilly Bryant</strong> as friend</p>
+
+        <p class="activity">Nov 22 - Posted a comment</p>
+
+        <p class="activity">Nov 21 - Added <strong>John Doe</strong> as friend</p>
+
+        <p class="activity">Nov 19 - Posted a comment</p>
+
+        <p class="activity">Nov 18 - Submitted a general post</p>
+      </section>
+
+
+    </div><!-- @end #content -->
+  </div><!-- @end #w -->
+<script type="text/javascript">
+$(function(){
+  $('#profiletabs ul li a').on('click', function(e){
+    e.preventDefault();
+    var newcontent = $(this).attr('href');
+
+    $('#profiletabs ul li a').removeClass('sel');
+    $(this).addClass('sel');
+
+    $('#content section').each(function(){
+      if(!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
+    });
+
+    $(newcontent).removeClass('hidden');
+  });
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
