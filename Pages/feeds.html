@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang = "en-US">
+<html lang="en-US">
+
 <head>
   <title>YO! | Feeds</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-  <link rel = "stylesheet" href = "../CSS/index.css">
-  <link rel = "stylesheet" href = "../CSS/feeds.css">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/feeds.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
+
 <body>
 
   <!-- Nav Bar-->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #602060;">
     <a class="navbar-brand" style="font-weight:bold;" href="#">
-    <img src="../logo/yo_v1-01.svg"width="35" height="35" alt="YO!"></a>
+      <img src="../logo/yo_v1-01.svg" width="35" height="35" alt="YO!"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,14 +28,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
 
-        <li class = "nav-item  active">
-          <a class = "nav-link" href="feeds.html"><i class="fas fa-rss-square"></i> Feeds <span class="sr-only">(current)</span></a>
+        <li class="nav-item  active">
+          <a class="nav-link" href="feeds.html"><i class="fas fa-rss-square"></i> Feeds <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="map.html"><i class="fas fa-map-marked-alt"></i> Map</a>
         </li>
-        <li class = "nav-item">
-          <a class = "nav-link" href="friends.html"><i class="fas fa-user-friends"></i> Friends</a>
+        <li class="nav-item">
+          <a class="nav-link" href="friends.html"><i class="fas fa-user-friends"></i> Friends</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="profile.html"><i class="fas fa-user"></i> Profile</a>
@@ -56,25 +58,25 @@
             <a class="dropdown-item" href="#">Emoji Bank</a>
             <a class="dropdown-item" href="#">More</a>
             <div class="dropdown-divider"></div>
-<!--
+            <!--
               <a class="dropdown-header">Map</a>
               <a class="dropdown-item" href="#">Customization</a>
               <div class="dropdown-divider"></div>
   -->
-              <a class="dropdown-header">Security and Feedback</a>
-              <a class="dropdown-item" href="#">Privacy</a>
-              <a class="dropdown-item" href="#">Support Center</a>
-              <a class="dropdown-item" href="#">Term and License</a>
-              <a class="dropdown-item" href="#">Privacy Policy</a>
-              <div class="dropdown-divider"></div>
+            <a class="dropdown-header">Security and Feedback</a>
+            <a class="dropdown-item" href="#">Privacy</a>
+            <a class="dropdown-item" href="#">Support Center</a>
+            <a class="dropdown-item" href="#">Term and License</a>
+            <a class="dropdown-item" href="#">Privacy Policy</a>
+            <div class="dropdown-divider"></div>
 
-              <a class="btn btn-danger" href="../index.html"style="margin-left: 27.5%; color:white;">Log Out</a>
+            <a class="btn btn-danger" href="../index.html" style="margin-left: 27.5%; color:white;">Log Out</a>
 
-            </div>
-          </li>
+          </div>
+        </li>
 
-        </ul>
-              <!--
+      </ul>
+      <!--
               <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 15px;">
               <i class="fas fa-sign-in-alt"></i> Sign in
@@ -102,27 +104,27 @@
             <a class="dropdown-item" href="#">Forgot password?</a>
           </div>
         </div>-->
-      </div>
+    </div>
   </nav>
   <!-- end of nav -->
 
   <div class="blog">
 
     <div class="header">
-  <h2><i class="fas fa-rss-square"></i> Feeds at UCSD</h2>
-</div>
-<div class="addbutton">
-  <button onclick="showHidden()" class="dropbtn" style="color: white; font-size:30px;"><i class="fas fa-plus"></i></button>
-  <div id="myDropdown" class="dropdown-content">
-    <b><i class="fas fa-edit"></i> Post to</b>
-    <a href="../Test/post-general.html"><i class="fas fa-campground"></i> General</a>
-    <a href="../Test/post-academic.html"><i class="fas fa-book"></i> Academic</a>
-    <a href="../Test/post-event.html"><i class="fas fa-hat-wizard"></i> Event</a>
-    <a href="../Test/post-thought.html"><i class="fas fa-lightbulb"></i> Thought</a>
-    <a onclick="appendCard()">New Sample Post </a>
-  </div>
-</div>
-<!-- Control buttons -->
+      <h2><i class="fas fa-rss-square"></i> Feeds at UCSD</h2>
+    </div>
+    <div class="addbutton">
+      <button onclick="showHidden()" class="dropbtn" style="color: white; font-size:30px;"><i class="fas fa-plus"></i></button>
+      <div id="myDropdown" class="dropdown-content">
+        <b><i class="fas fa-edit"></i> Post to</b>
+        <a href="../Test/post-general.html"><i class="fas fa-campground"></i> General</a>
+        <a href="../Test/post-academic.html"><i class="fas fa-book"></i> Academic</a>
+        <a href="../Test/post-event.html"><i class="fas fa-hat-wizard"></i> Event</a>
+        <a href="../Test/post-thought.html"><i class="fas fa-lightbulb"></i> Thought</a>
+        <a onclick="appendCard()">New Sample Post </a>
+      </div>
+    </div>
+    <!-- Control buttons -->
 
 
     <a class="btn btn-outline-secondary dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -131,148 +133,157 @@
     <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
 
       <a class="dropdown-item" onclick="filterSelection('all')"> Show all</a>
-        <div class="dropdown-divider"></div>
+      <div class="dropdown-divider"></div>
       <a class="dropdown-item" onclick="filterSelection('general')"> General</a>
       <a class="dropdown-item" onclick="filterSelection('academic')"> Academic</a>
       <a class="dropdown-item" onclick="filterSelection('event')"> Event</a>
       <a class="dropdown-item" onclick="filterSelection('thought')"> Thought</a>
 
-</div>
+    </div>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card" id="card-t">
-      <h2>My Profile</h2>
-      <img src="../Asset/Images/profile_pics/head_wisteria.png" alt="Profile"
-      style="min-height:100px; max-width:100px ;border-radius: 100px; margin:auto; margin-top: 20px;">
-      <hr>
-      <p style="margin-top: 5px;">Name: William</p>
-      <p style="margin-top: 5px;">Home: La Jolla</p>
-      <p style="margin-top: 5px;">Birthday: 1/1/1998</p>
-    </div>
-    <div class="card" id="card-t">
-      <h2 style="font-size: 24px;">Popular Post</h2>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card" id="card-t">
-      <h2 style="font-size: 24px;">Others</h2>
-      <p>Some text..</p>
-    </div>
-  </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card" id="card-t">
+          <h2>My Profile</h2>
+          <img src="../Asset/Images/profile_pics/head_wisteria.png" alt="Profile" style="min-height:100px; max-width:100px ;border-radius: 100px; margin:auto; margin-top: 20px;">
+          <hr>
+          <p style="margin-top: 5px;">Name: William</p>
+          <p style="margin-top: 5px;">Home: La Jolla</p>
+          <p style="margin-top: 5px;">Birthday: 1/1/1998</p>
+        </div>
+        <div class="card" id="card-t">
+          <h2 style="font-size: 24px;">Popular Post</h2>
+          <div class="fakeimg">Image</div><br>
+          <div class="fakeimg">Image</div><br>
+          <div class="fakeimg">Image</div>
+        </div>
+        <div class="card" id="card-t">
+          <h2 style="font-size: 24px;">Others</h2>
+          <p>Some text..</p>
+        </div>
+      </div>
 
-  <div class="midcolumn">
-    <div class="filter general">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/general.svg" width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING General</h2>
-      </div>
-        <h7 style="color: grey;">3 min</h7>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark" onclick="showmore(1)" id="myBtn"> Read More </button>
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <div id="type1" style="display: none;">
-            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
-          </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
-        </div>
+      <div class="midcolumn">
+        <div class="filter general">
+          <div class="card" id="card-t">
+            <div id="container">
+              <img src="../Asset/general.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+              <h2>TITLE HEADING General</h2>
+            </div>
+            <h7 style="color: grey;">3 min</h7>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis
+                dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <button class="btn btn-outline-dark" onclick="showmore(1)" id="myBtn"> Read More </button>
+            <div align="right" class="bgroup">
+              <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+              <div id="type1" style="display: none;">
+                <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+              </div>
+              <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
+            </div>
 
-      </div>
-    </div>
-    <div class="filter academic">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/academic.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING Academic</h2>
-      </div>
-        <h7 style="color: grey;">30 min</h7>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark" onclick="showmore(2)" id="myBtn"> Read More </button>
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <div id="type2" style="display: none;">
-            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
           </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
+        </div>
+        <div class="filter academic">
+          <div class="card" id="card-t">
+            <div id="container">
+              <img src="../Asset/academic.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+              <h2>TITLE HEADING Academic</h2>
+            </div>
+            <h7 style="color: grey;">30 min</h7>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis
+                dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <button class="btn btn-outline-dark" onclick="showmore(2)" id="myBtn"> Read More </button>
+            <div align="right" class="bgroup">
+              <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+              <div id="type2" style="display: none;">
+                <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+              </div>
+              <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter thought">
+          <div class="card" id="card-t">
+            <div id="container">
+              <img src="../Asset/thought.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+              <h2>TITLE HEADING Thought</h2>
+            </div>
+            <h7 style="color: grey;">November 7 at 16:40</h7>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more3" style="display: none;">erisque enim ligula venenatis
+                dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <button class="btn btn-outline-dark" onclick="showmore(3)" id="myBtn"> Read More </button>
+            <div align="right" class="bgroup">
+              <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+              <div id="type3" style="display: none;">
+                <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+              </div>
+              <button class="btn btn-outline-primary" onclick="typeComment(3)"> <i class="fa fa-comment"></i> Comment </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter event">
+          <div class="card" id="card-t">
+            <div id="container">
+              <img src="../Asset/event.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+              <h2>TITLE HEADING Event</h2>
+            </div>
+            <h7 style="color: grey;">November 6 at 13:11 </h7>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more4" style="display: none;">erisque enim ligula venenatis
+                dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                turpis. Donec vitae dui eget tellus gravida
+                venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <button class="btn btn-outline-dark" onclick="showmore(4)" id="myBtn"> Read More </button>
+            <div align="right" class="bgroup">
+              <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+              <div id="type4" style="display: none;">
+                <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+              </div>
+              <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter general">
+          <div class="card" id="card-t">
+            <div id="container">
+              <img src="../Asset/general.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+              <h2>TITLE HEADING General</h2>
+            </div>
+            <h7 style="color: grey;">November 6 at 10:24</h7>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more5" style="display: none;">erisque enim ligula venenatis
+                dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                turpis. Donec vitae dui eget tellus gravida
+                venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <button class="btn btn-outline-dark" onclick="showmore(5)" id="myBtn"> Read More </button>
+            <div align="right" class="bgroup">
+              <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+              <div id="type5" style="display: none;">
+                <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
+              </div>
+              <button class="btn btn-outline-primary" onclick="typeComment(5)"> <i class="fa fa-comment"></i> Comment </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="filter thought">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/thought.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING Thought</h2>
-      </div>
-        <h7 style="color: grey;">November 7 at 16:40</h7>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more3" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark" onclick="showmore(3)" id="myBtn"> Read More </button>
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <div id="type3" style="display: none;">
-            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
-          </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(3)"> <i class="fa fa-comment"></i> Comment </button>
-        </div>
-      </div>
-    </div>
-    <div class="filter event">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/event.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING Event</h2>
-      </div>
-        <h7 style="color: grey;">November 6 at 13:11 </h7>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more4" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
-          venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark" onclick="showmore(4)" id="myBtn"> Read More </button>
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <div id="type4" style="display: none;">
-            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
-          </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
-        </div>
-      </div>
-    </div>
-    <div class="filter general">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/general.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING General</h2>
-      </div>
-        <h7 style="color: grey;">November 6 at 10:24</h7>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more5" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
-          venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark" onclick="showmore(5)" id="myBtn"> Read More </button>
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <div id="type5" style="display: none;">
-            <textarea class="form-control comment" id="content" rows="4" placeholder="Add your comment..."></textarea>
-          </div>
-          <button class="btn btn-outline-primary" onclick="typeComment(5)"> <i class="fa fa-comment"></i> Comment </button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="rightcolumn">
-    <div class="card" id="card-t">
-      <h2 style="font-size: 24px;">Upcoming Events:</h2>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+      <div class="rightcolumn">
+        <div class="card" id="card-t">
+          <h2 style="font-size: 24px;">Upcoming Events:</h2>
+          <div class="fakeimg" style="height:200px;">Image</div>
+          <p>Some text..</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+    <div class="footer">
+      <h2>Footer</h2>
+    </div>
   </div>
 
   <!-- chat box -->
@@ -370,44 +381,42 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script src="../JS/feeds.js"></script>
 <script>
-(function() {
+  (function() {
 
-$('#live-chat header').on('click', function() {
+    $('#live-chat header').on('click', function() {
 
-  $('.chat').slideToggle(300, 'swing');
-  $('.chat-message-counter').fadeToggle(300, 'swing');
+      $('.chat').slideToggle(300, 'swing');
+      $('.chat-message-counter').fadeToggle(300, 'swing');
 
-});
+    });
 
-$('.chat-close').on('click', function(e) {
+    $('.chat-close').on('click', function(e) {
 
-  e.preventDefault();
-  $('#live-chat').fadeOut(300);
+      e.preventDefault();
+      $('#live-chat').fadeOut(300);
 
-});
+    });
 
-}) ();
+  })();
 
 
-$(document).ready(function() {
-  $('.btn-outline-success').click(function() {
-    $(this).toggleClass("active");
+  $(document).ready(function() {
+    $('.btn-outline-success').click(function() {
+      $(this).toggleClass("active");
+    });
   });
-});
 
-$(document).ready(function() {
-  $('.btn-outline-primary').click(function() {
-    $(this).toggleClass("active");
+  $(document).ready(function() {
+    $('.btn-outline-primary').click(function() {
+      $(this).toggleClass("active");
+    });
   });
-});
 
-$(document).ready(function() {
-  $('.btn-outline-dark').click(function() {
-    $(this).toggleClass("active");
+  $(document).ready(function() {
+    $('.btn-outline-dark').click(function() {
+      $(this).toggleClass("active");
+    });
   });
-});
-
-
 </script>
 
 </html>

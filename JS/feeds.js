@@ -1,7 +1,8 @@
 var number = 1;
+
 function appendCard() {
-  $(".midcolumn").append( "<div class='card' id='card-t'>\
-    <h2>TITLE HEADING new" + " " + number +"</h2>\
+  $(".midcolumn").append("<div class='card' id='card-t'>\
+    <h2>TITLE HEADING new" + " " + number + "</h2>\
     <h5>Title description, Dec 7, 2017</h5>\
     <div class='fakeimg' style='height:200px;'>Image</div>\
     <p>Some text..</p>\
@@ -14,9 +15,10 @@ function appendCard() {
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 var count = 0;
+
 function showHidden() {
 
-    document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
@@ -38,6 +40,7 @@ window.onclick = function(event) {
 
 // filter
 filterSelection("all")
+
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filter");
@@ -79,7 +82,7 @@ function w3RemoveClass(element, name) {
 
 // Show More
 function showmore(num) {
-  var dots = document.getElementById("dots"+num);
+  var dots = document.getElementById("dots" + num);
   var moreText = document.getElementById("more" + num);
   var btnText = document.getElementById("rm" + num);
 
@@ -95,28 +98,28 @@ function showmore(num) {
 }
 
 function typeComment(num) {
-    var x = document.getElementById("type" + num);
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+  var x = document.getElementById("type" + num);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
 
 function showComments(num) {
   var x = document.getElementById("hd" + num);
   var btnText = document.getElementById("ldm" + num);
   if (x.style.display === "none") {
-      x.style.display = "block";
-      btnText.innerHTML = "View Less Comments";
+    x.style.display = "block";
+    btnText.innerHTML = "View Less Comments";
   } else {
-      x.style.display = "none";
+    x.style.display = "none";
 
-      btnText.innerHTML = "Load More Comments";
+    btnText.innerHTML = "Load More Comments";
   }
 }
 
 $('.like').click(function() {
-    $(this).toggleClass('btn-outline-success');
-    $(this).toggleClass('btn-success');
+  $(this).toggleClass('btn-outline-success');
+  $(this).toggleClass('btn-success');
 });

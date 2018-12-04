@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en-US">
+
 <head>
   <title>YO! | Profile</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
@@ -10,10 +11,10 @@
 </head>
 
 <body>
-<!-- navbar -->
+  <!-- navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #602060;">
     <a class="navbar-brand" style="font-weight:bold;" href="map.html">
-    <img src="../logo/yo_v1-01.svg"width="35" height="35" alt="YO!"></a>
+      <img src="../logo/yo_v1-01.svg" width="35" height="35" alt="YO!"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,7 +24,7 @@
       <button class="btn btn-md btn-outline-light" type="submit" style="font-size:12px; height: 38px; padding: 0 12px; "><i class="fas fa-search"></i></button>
     </form>
   -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
 
 
@@ -33,8 +34,8 @@
         <li class="nav-item">
           <a class="nav-link" href="map.html"><i class="fas fa-map-marked-alt"></i> Map</a>
         </li>
-        <li class = "nav-item">
-          <a class = "nav-link" href="friends.html"><i class="fas fa-user-friends"></i> Friends</a>
+        <li class="nav-item">
+          <a class="nav-link" href="friends.html"><i class="fas fa-user-friends"></i> Friends</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="profile.html"><i class="fas fa-user"></i> Profile<span class="sr-only">(current)</span></a>
@@ -57,7 +58,7 @@
             <a class="dropdown-item" href="#">Emoji Bank</a>
             <a class="dropdown-item" href="#">More</a>
             <div class="dropdown-divider"></div>
-<!--
+            <!--
             <a class="dropdown-header">Map</a>
             <a class="dropdown-item" href="#">Customization</a>
             <div class="dropdown-divider"></div>
@@ -69,7 +70,7 @@
             <a class="dropdown-item" href="#">Privacy Policy</a>
             <div class="dropdown-divider"></div>
 
-            <a class="btn btn-danger" href="../index.html"style="margin-left: 27.5%; color:white;">Log Out</a>
+            <a class="btn btn-danger" href="../index.html" style="margin-left: 27.5%; color:white;">Log Out</a>
 
           </div>
         </li>
@@ -127,7 +128,7 @@
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
           laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
           voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </section>
 
       <section id="activity" class="hidden">
@@ -160,26 +161,29 @@
       </section>
     </div><!-- @end #content -->
   </div><!-- @end #w -->
-<script type="text/javascript">
-$(function(){
-  $('#profiletabs ul li a').on('click', function(e){
-    e.preventDefault();
-    var newcontent = $(this).attr('href');
+  <script type="text/javascript">
+    $(function() {
+      $('#profiletabs ul li a').on('click', function(e) {
+        e.preventDefault();
+        var newcontent = $(this).attr('href');
 
-    $('#profiletabs ul li a').removeClass('sel');
-    $(this).addClass('sel');
+        $('#profiletabs ul li a').removeClass('sel');
+        $(this).addClass('sel');
 
-    $('#content section').each(function(){
-      if(!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
+        $('#content section').each(function() {
+          if (!$(this).hasClass('hidden')) {
+            $(this).addClass('hidden');
+          }
+        });
+
+        $(newcontent).removeClass('hidden');
+      });
     });
-
-    $(newcontent).removeClass('hidden');
-  });
-});
-</script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

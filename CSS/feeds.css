@@ -7,51 +7,49 @@ body {
   background-attachment: fixed;
 }
 
-.card h2{
+.card h2 {
   font-family: 'Roboto', sans-serif;
   color: #4d194d;
-
 }
 
-.comment{
+.comment {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.filter{
+
+.filter {
   display: none;
 }
 
 .show {
-    display: block;
+  display: block;
 }
+
 /* Add a dark background to the active button */
 .btn.active {
   background-color: #666;
   color: white;
 }
 
-.blog{
+.blog {
   max-width: 1200px;
   margin: auto;
   padding-top: 30px;
-
 }
+
 /* Header/Blog Title */
 .header {
   padding-top: 30px;
   font-size: 40px;
   text-align: center;
   color: #4d194d;
-
-
 }
 
-.header h2{
+.header h2 {
   font-weight: bold;
   font-size: 50px;
   font-family: 'Roboto', sans-serif;
 }
-
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
@@ -60,7 +58,7 @@ body {
   width: 22%;
 }
 
-.midcolumn{
+.midcolumn {
   float: left;
   width: 60%;
   padding-left: 20px;
@@ -73,14 +71,12 @@ body {
   padding-left: 20px;
 }
 
-
 /* Fake image */
 .fakeimg {
   background-color: #aaa;
   width: 100%;
   padding: 20px;
 }
-
 
 /* Add a card effect for articles */
 .card {
@@ -89,22 +85,21 @@ body {
   margin-top: 20px;
 }
 
-#card-t{
+#card-t {
   /*background: rgba(245,245,245,0.6);*/
-  background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.4),rgba(255,255,255,0.6));
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6));
   background-color: rgba(250, 250, 250, 0.2);
   border-radius: 12px;
   border: 0px;
-  box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.15);
+  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
-
-
-#myBtn{
+#myBtn {
   width: 95%;
   margin: auto;
 }
-.bgroup{
+
+.bgroup {
   margin-top: 14px;
 }
 
@@ -124,72 +119,85 @@ body {
   width: 100%;
 }
 
-.addbutton button{
-  background-color: #602060; /* purple background */
+.addbutton button {
+  background-color: #602060;
+  /* purple background */
   border: 0px solid white;
-  color: white; /* White text */
+  color: white;
+  /* White text */
   padding: 8px;
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+  cursor: pointer;
+  /* Pointer/hand icon */
+  float: left;
+  /* Float the buttons side by side */
   text-align: center;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   border-radius: 50px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
   transition-duration: 0.4s;
   width: 60px;
   position: fixed;
-  top:100px;
-  right:10%;
+  top: 100px;
+  right: 10%;
   z-index: 99;
-  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* Add a background color on hover */
 .addbutton button:hover {
-    background-color: #914791;
+  background-color: #914791;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
-    position: fixed;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 99;
-    top:170px;
-    right:10%;
+  display: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  top: 170px;
+  right: 10%;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-content b {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.addbutton:hover .dropbtn {background-color: #914791;}
+.addbutton:hover .dropbtn {
+  background-color: #914791;
+}
 
 #background {
-    height: 400px;
-    background-color: white; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom, #654ea3, #eaafc8); /* Standard syntax (must be last) */
+  height: 400px;
+  background-color: white;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom, #654ea3, #eaafc8);
+  /* Standard syntax (must be last) */
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */

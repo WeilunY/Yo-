@@ -1,455 +1,451 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>YO! | Map</title>
-<meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-<link rel="stylesheet" href = "../CSS/index.css">
-<link rel = "stylesheet" href = "../CSS/feedsOverlay.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link href="../CSS/chatOverlay.css" rel="stylesheet" >
-<link href="../CSS/postOverlay.css" rel="stylesheet" >
+  <title>YO! | Map</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/feedsOverlay.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="../CSS/chatOverlay.css" rel="stylesheet">
+  <link href="../CSS/postOverlay.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- Nav Bar -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #602060;">
-  <a class="navbar-brand" style="font-weight:bold;" href="map.html">
-    <img src="../logo/yo_v1-01.svg"width="35" height="35" alt="YO!"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <!-- Nav Bar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #602060;">
+    <a class="navbar-brand" style="font-weight:bold;" href="map.html">
+      <img src="../logo/yo_v1-01.svg" width="35" height="35" alt="YO!"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!--
+    <!--
   <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-md btn-outline-light" type="submit" style="font-size:12px; height: 38px; padding: 0 12px; "><i class="fas fa-search"></i></button>
   </form>
 -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <!--<li class = "nav-item">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!--<li class = "nav-item">
         <a class = "nav-link" href="feeds.html"><i class="fas fa-rss-square"></i> Feeds</a>
       </li>-->
-      <li class="nav-item active">
-        <a class="nav-link" href="map.html"><i class="fas fa-map-marked-alt"></i> Map<span class="sr-only">(current)</span></a>
-      </li>
-      <li class = "nav-item">
-        <a class = "nav-link" href="friends.html"><i class="fas fa-user-friends"></i> Friends</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="profile.html"><i class="fas fa-user"></i> Profile</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-wrench"></i> Settings
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-header">Account Settings</a>
-          <a class="dropdown-item" href="#">User Information</a>
-          <a class="dropdown-item" href="#">Password</a>
-          <a class="dropdown-item" href="#">Notifications</a>
-          <a class="dropdown-item" href="#">Blocked Users</a>
-          <div class="dropdown-divider"></div>
+        <li class="nav-item active">
+          <a class="nav-link" href="map.html"><i class="fas fa-map-marked-alt"></i> Map<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="friends.html"><i class="fas fa-user-friends"></i> Friends</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-wrench"></i> Settings
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-header">Account Settings</a>
+            <a class="dropdown-item" href="#">User Information</a>
+            <a class="dropdown-item" href="#">Password</a>
+            <a class="dropdown-item" href="#">Notifications</a>
+            <a class="dropdown-item" href="#">Blocked Users</a>
+            <div class="dropdown-divider"></div>
 
-          <a class="dropdown-header">General</a>
-          <a class="dropdown-item" href="#">Language</a>
-          <a class="dropdown-item" href="#">Font Size</a>
-          <a class="dropdown-item" href="#">Emoji Bank</a>
-          <a class="dropdown-item" href="#">More</a>
-          <div class="dropdown-divider"></div>
+            <a class="dropdown-header">General</a>
+            <a class="dropdown-item" href="#">Language</a>
+            <a class="dropdown-item" href="#">Font Size</a>
+            <a class="dropdown-item" href="#">Emoji Bank</a>
+            <a class="dropdown-item" href="#">More</a>
+            <div class="dropdown-divider"></div>
 
-          <a class="dropdown-header">Map</a>
-          <a class="dropdown-item" href="#">Customization</a>
-          <div class="dropdown-divider"></div>
+            <a class="dropdown-header">Map</a>
+            <a class="dropdown-item" href="#">Customization</a>
+            <div class="dropdown-divider"></div>
 
-          <a class="dropdown-header">Security and Feedback</a>
-          <a class="dropdown-item" href="#">Privacy</a>
-          <a class="dropdown-item" href="#">Support Center</a>
-          <a class="dropdown-item" href="#">Term and License</a>
-          <a class="dropdown-item" href="#">Privacy Policy</a>
-          <div class="dropdown-divider"></div>
+            <a class="dropdown-header">Security and Feedback</a>
+            <a class="dropdown-item" href="#">Privacy</a>
+            <a class="dropdown-item" href="#">Support Center</a>
+            <a class="dropdown-item" href="#">Term and License</a>
+            <a class="dropdown-item" href="#">Privacy Policy</a>
+            <div class="dropdown-divider"></div>
 
-          <a class="btn btn-danger" href="../index.html" style="margin-left: 27.5%; color:white;">Log Out</a>
+            <a class="btn btn-danger" href="../index.html" style="margin-left: 27.5%; color:white;">Log Out</a>
 
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Map -->
+  <button onclick="openFeeds()" class="openFeed"> <i class="fas fa-rss-square"></i> </button>
+  <button onclick="openChat1()" class="openChat"> <i class="fas fa-comments"></i> </button>
+
+  <input id="pac-input" class="controls" type="text" placeholder="Search Map">
+  <div id="map"></div>
+
+  <!-- Overlay Feed -->
+  <div id="feeds" class="overlay">
+    <button onclick="closeFeeds()" class="closeFeed"> <i class="fas fa-times"></i></button>
+    <div class="blog">
+
+      <div class="header">
+        <h2><i class="fas fa-rss-square"></i> Feeds at UCSD</h2>
+      </div>
+      <div class="addbutton">
+        <button onclick="showHidden()" class="dropbtn" style="color: white; font-size:30px;"><i class="fas fa-plus"></i></button>
+        <div id="myDropdown" class="dropdown-content">
+          <b><i class="fas fa-edit"></i> Post to</b>
+          <a onclick="openPost()"><i class="fas fa-campground"></i> General</a>
+          <a onclick="openPost1()"><i class="fas fa-book"></i> Academic</a>
+          <a onclick="openPost2()"><i class="fas fa-hat-wizard"></i> Event</a>
         </div>
-      </li>
-
-    </ul>
-  </div>
-</nav>
-
-<!-- Map -->
-<button onclick="openFeeds()" class="openFeed"> <i class="fas fa-rss-square"></i> </button>
-<button onclick="openChat1()" class="openChat"> <i class="fas fa-comments"></i> </button>
-
-<input id="pac-input" class="controls" type="text" placeholder="Search Map">
-<div id="map"></div>
-
-<!-- Overlay Feed -->
-<div id="feeds" class="overlay">
-  <button onclick="closeFeeds()" class="closeFeed"> <i class="fas fa-times"></i></button>
-  <div class="blog">
-
-    <div class="header">
-  <h2><i class="fas fa-rss-square"></i> Feeds at UCSD</h2>
-</div>
-<div class="addbutton">
-  <button onclick="showHidden()" class="dropbtn" style="color: white; font-size:30px;"><i class="fas fa-plus"></i></button>
-  <div id="myDropdown" class="dropdown-content">
-    <b><i class="fas fa-edit"></i> Post to</b>
-    <a onclick="openPost()"><i class="fas fa-campground"></i> General</a>
-    <a onclick="openPost1()"><i class="fas fa-book"></i> Academic</a>
-    <a onclick="openPost2()"><i class="fas fa-hat-wizard"></i> Event</a>
-  </div>
-</div>
-<!-- Control buttons -->
+      </div>
+      <!-- Control buttons -->
 
 
-    <a class="btn btn-outline-secondary dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-filter"></i> Filter
-    </a>
-    <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="btn btn-outline-secondary dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-filter"></i> Filter
+      </a>
+      <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
 
-      <a class="dropdown-item" onclick="filterSelection('all')"> Show all</a>
+        <a class="dropdown-item" onclick="filterSelection('all')"> Show all</a>
         <div class="dropdown-divider"></div>
-      <a class="dropdown-item" onclick="filterSelection('general')"> General</a>
-      <a class="dropdown-item" onclick="filterSelection('academic')"> Academic</a>
-      <a class="dropdown-item" onclick="filterSelection('event')"> Event</a>
+        <a class="dropdown-item" onclick="filterSelection('general')"> General</a>
+        <a class="dropdown-item" onclick="filterSelection('academic')"> Academic</a>
+        <a class="dropdown-item" onclick="filterSelection('event')"> Event</a>
 
-</div>
+      </div>
 
-<!-- Post -->
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card" id="card-t">
-      <a href="profile.html"><h2>My Profile</h2></a>
-      <a href="profile.html">
-      <img src="../Asset/Images/profile_pics/head_wisteria.png" alt="Profile"
-      style="min-height:100px; max-width:100px ;border-radius: 100px; margin:auto; margin-top: 20px;"></a>
-      <hr>
-      <p style="margin-top: 5px;">Name: William</p>
-      <p style="margin-top: 5px;">Home: La Jolla</p>
-      <p style="margin-top: 5px;">Birthday: 1/1/1998</p>
+      <!-- Post -->
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card" id="card-t">
+            <a href="profile.html">
+              <h2>My Profile</h2>
+            </a>
+            <a href="profile.html">
+              <img src="../Asset/Images/profile_pics/head_wisteria.png" alt="Profile" style="min-height:100px; max-width:100px ;border-radius: 100px; margin:auto; margin-top: 20px;"></a>
+            <hr>
+            <p style="margin-top: 5px;">Name: William</p>
+            <p style="margin-top: 5px;">Home: La Jolla</p>
+            <p style="margin-top: 5px;">Birthday: 1/1/1998</p>
+          </div>
+
+        </div>
+
+        <div class="midcolumn" id="midpost">
+          <div class="filter general">
+            <div class="card" id="card-t">
+              <div id="container">
+                <img src="../Asset/general.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+                <h2>TITLE HEADING General</h2>
+              </div>
+              <h6> by Jane Doe </h6>
+              <h7 style="color: grey; margin-bottom: 12px;">3 min ago</h7>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots1">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis
+                  dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                  turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+              <button class="btn btn-outline-dark myBtn" onclick="showmore(1)" id="rm1"> Read More </button>
+
+              <div class="comments" id="comment1">
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"><a href="Profile-JD.html"> John Doe </a></p>
+                    <p id="comment_stuff"> This is Nice, thank you :) </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_belize_hole.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"><a href="Profile-AO.html"> Annie Obrien </a></p>
+                    <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+
+                <div id="hd1" style="display: none;">
+                  <div class="a_comment">
+                    <div class="person">
+                      <img src="../Asset/Images/profile_pics/head_green_sea.png" style="height:45px; width:45px ;border-radius: 100px;">
+                    </div>
+                    <div class="comment_content">
+                      <p id="comment_name"><a href="Profile-KeA.html"> Kelvin Arias</a></p>
+                      <p id="comment_stuff"> Ha Ha Ha </p>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                  <div class="a_comment">
+                    <div class="person">
+                      <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                    </div>
+                    <div class="comment_content">
+                      <p id="comment_name"> <a href="Profile-MK.html"> Martin K. </a></p>
+                      <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div align="right" class="bgroup">
+                <button class="btn btn-outline-secondary ldm" id="ldm1" onclick="showComments(1)"> Load More Comments </button>
+                <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+                <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
+                <div id="type1" style="display: none;">
+                  <textarea class="form-control comment" id="c1" rows="4" placeholder="Add your comment..."></textarea>
+                  <button class="btn btn-dark" onclick="postComment(1)">Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter academic">
+            <div class="card" id="card-t">
+              <div id="container">
+                <img src="../Asset/academic.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+                <h2>TITLE HEADING Academic</h2>
+              </div>
+              <h6> by Martin K.</h6>
+              <h7 style="color: grey; margin-bottom: 12px;">30 min ago</h7>
+              <h4> Subject: Cognitive Science</h4>
+              <div class="fakeimg" style="height:200px;">Image</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots2">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis
+                  dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                  turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+              <button class="btn btn-outline-dark myBtn" onclick="showmore(2)" id="rm2"> Read More </button>
+
+              <div class="comments" id="comment2">
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"> <a href="Profile-JD.html">John Doe </a></p>
+                    <p id="comment_stuff"> This is Nice, thank you :) </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_belize_hole.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"> <a href="Profile-CF.html"> Cierra Fisher </a></p>
+                    <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+
+                <div id="hd2" style="display: none;">
+                  <div class="a_comment">
+                    <div class="person">
+                      <img src="../Asset/Images/profile_pics/head_green_sea.png" style="height:45px; width:45px ;border-radius: 100px;">
+                    </div>
+                    <div class="comment_content">
+                      <p id="comment_name"><a href="Profile-RR.html"> Ross Richards </a></p>
+                      <p id="comment_stuff"> lol </p>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                  <div class="a_comment">
+                    <div class="person">
+                      <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                    </div>
+                    <div class="comment_content">
+                      <p id="comment_name"> <a href="Profile-JT.html">Justus Townsend </a></p>
+                      <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div align="right" class="bgroup">
+                <button class="btn btn-outline-secondary ldm" id="ldm2" onclick="showComments(2)"> Load More Comments </button>
+                <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+                <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
+                <div id="type2" style="display: none;">
+                  <textarea class="form-control comment" id="c2" rows="4" placeholder="Add your comment..."></textarea>
+                  <button class="btn btn-dark" onclick="postComment(2)">Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter event">
+            <div class="card" id="card-t">
+              <div id="container">
+                <img src="../Asset/event.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+                <h2>TITLE HEADING Event</h2>
+              </div>
+              <h6> by John Doe </h6>
+              <h7 style="color: grey; margin-bottom: 12px;">November 6 at 13:11 </h7>
+              <h4> Location @ Price Center</h4>
+              <h5> Date: 11/22/2018</h5>
+              <div class="fakeimg" style="height:200px;">Image</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots3">...</span><span id="more3" style="display: none;">erisque enim ligula venenatis
+                  dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                  turpis. Donec vitae dui eget tellus gravida
+                  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+              <button class="btn btn-outline-dark myBtn" onclick="showmore(3)" id="rm3"> Read More </button>
+
+              <div class="comments" id="comment3">
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"> <a href="Profile-JaD.html">Jane Doe </a></p>
+                    <p id="comment_stuff"> Nice work :) </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_belize_hole.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"> <a href="Profile-JM.html">Jaylin Martin </a></p>
+                    <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+
+                <div id="hd3" style="display: none;">
+                  <div class="a_comment">
+                    <div class="person">
+                      <img src="../Asset/Images/profile_pics/head_green_sea.png" style="height:45px; width:45px ;border-radius: 100px;">
+                    </div>
+                    <div class="comment_content">
+                      <p id="comment_name"><a href="Profile-DF.html"> Dereon Fritz </a></p>
+                      <p id="comment_stuff"> Ha Ha Ha </p>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                  <div class="a_comment">
+                    <div class="person">
+                      <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                    </div>
+                    <div class="comment_content">
+                      <p id="comment_name"><a href="Profile-AO.html"> Annie Obrien</a></p>
+                      <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div align="right" class="bgroup">
+                <button class="btn btn-outline-secondary ldm" id="ldm3" onclick="showComments(3)"> Load More Comments </button>
+                <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+                <button class="btn btn-outline-primary" onclick="typeComment(3)"> <i class="fa fa-comment"></i> Comment </button>
+                <div id="type3" style="display: none;">
+                  <textarea class="form-control comment" id="c3" rows="4" placeholder="Add your comment..."></textarea>
+                  <button class="btn btn-dark" onclick="postComment(3)">Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter general">
+            <div class="card" id="card-t">
+              <div id="container">
+                <img src="../Asset/general.svg" width="35" height="35" align="left" style="margin-right: 20px;" />
+                <h2>TITLE HEADING General</h2>
+              </div>
+              <h6> by Dereon Fritz </h6>
+              <h7 style="color: grey; margin-bottom: 12px;">November 6 at 10:24</h7>
+              <div class="fakeimg" style="height:200px;">Image</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots4">...</span><span id="more4" style="display: none;">erisque enim ligula venenatis
+                  dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+                  turpis. Donec vitae dui eget tellus gravida
+                  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+              <button class="btn btn-outline-dark myBtn" onclick="showmore(4)" id="rm4"> Read More </button>
+
+              <div class="comments" id="comment4">
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"><a href="Profile-JD.html">John Doe </a></p>
+                    <p id="comment_stuff"> This is Nice, thank you :) </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+                <div class="a_comment">
+                  <div class="person">
+                    <img src="../Asset/Images/profile_pics/head_belize_hole.png" style="height:45px; width:45px ;border-radius: 100px;">
+                  </div>
+                  <div class="comment_content">
+                    <p id="comment_name"><a href="Profile-LB.html">Lilly Bryant</a></p>
+                    <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+
+                <div id="hd4" style="display: none;">
+                  <div class="a_comment">
+                    <div class="person">
+                      <img src="../Asset/Images/profile_pics/head_pete_river.png" style="height:45px; width:45px ;border-radius: 100px;">
+                    </div>
+                    <div class="comment_content">
+                      <p id="comment_name"><a href="Profile-AM.html"> Ariel Moreno </a></p>
+                      <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div align="right" class="bgroup">
+                <button class="btn btn-outline-secondary ldm" id="ldm4" onclick="showComments(4)"> Load More Comments </button>
+                <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
+                <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
+                <div id="type4" style="display: none;">
+                  <textarea class="form-control comment" id="c4" rows="4" placeholder="Add your comment..."></textarea>
+                  <button class="btn btn-dark" onclick="postComment(4)">Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rightcolumn">
+          <div class="card" id="card-t">
+            <h2 style="font-size: 24px;">Campus Ads</h2>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+          </div>
+          <div class="card" id="card-t">
+            <h2 style="font-size: 24px;">Campus Ads</h2>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <h2>Footer</h2>
+      </div>
     </div>
 
   </div>
 
-  <div class="midcolumn" id="midpost">
-    <div class="filter general">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/general.svg" width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING General</h2>
-      </div>
-        <h6> by Jane Doe </h6>
-        <h7 style="color: grey; margin-bottom: 12px;">3 min ago</h7>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots1">...</span><span id="more1" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark myBtn" onclick="showmore(1)" id="rm1"> Read More </button>
-
-        <div class="comments" id="comment1">
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_pete_river.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"><a href="Profile-JD.html"> John Doe </a></p>
-              <p id="comment_stuff"> This is Nice, thank you :) </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_belize_hole.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"><a href="Profile-AO.html"> Annie Obrien </a></p>
-              <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-
-          <div id="hd1" style="display: none;">
-            <div class="a_comment" >
-              <div class="person">
-                <img src="../Asset/Images/profile_pics/head_green_sea.png"
-                style="height:45px; width:45px ;border-radius: 100px;">
-              </div>
-              <div class="comment_content">
-                <p id="comment_name"><a href="Profile-KeA.html"> Kelvin Arias</a></p>
-                <p id="comment_stuff"> Ha Ha Ha </p>
-              </div>
-              <div style="clear:both;"></div>
-            </div>
-            <div class="a_comment">
-              <div class="person">
-                <img src="../Asset/Images/profile_pics/head_pete_river.png"
-                style="height:45px; width:45px ;border-radius: 100px;">
-              </div>
-              <div class="comment_content">
-                <p id="comment_name"> <a href="Profile-MK.html"> Martin K. </a></p>
-                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-              </div>
-              <div style="clear:both;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-secondary ldm" id="ldm1" onclick="showComments(1)"> Load More Comments </button>
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-outline-primary" onclick="typeComment(1)"> <i class="fa fa-comment"></i> Comment </button>
-          <div id="type1" style="display: none;">
-            <textarea class="form-control comment" id="c1" rows="4" placeholder="Add your comment..."></textarea>
-            <button class="btn btn-dark" onclick="postComment(1)">Post</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="filter academic">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/academic.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING Academic</h2>
-      </div>
-        <h6> by Martin K.</h6>
-        <h7 style="color: grey; margin-bottom: 12px;">30 min ago</h7>
-        <h4> Subject: Cognitive Science</h4>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots2">...</span><span id="more2" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark myBtn" onclick="showmore(2)" id="rm2"> Read More </button>
-
-        <div class="comments" id="comment2">
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_pete_river.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"> <a href="Profile-JD.html">John Doe </a></p>
-              <p id="comment_stuff"> This is Nice, thank you :) </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_belize_hole.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"> <a href="Profile-CF.html"> Cierra Fisher </a></p>
-              <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-
-          <div id="hd2" style="display: none;">
-            <div class="a_comment" >
-              <div class="person">
-                <img src="../Asset/Images/profile_pics/head_green_sea.png"
-                style="height:45px; width:45px ;border-radius: 100px;">
-              </div>
-              <div class="comment_content">
-                <p id="comment_name"><a href="Profile-RR.html"> Ross Richards </a></p>
-                <p id="comment_stuff"> lol </p>
-              </div>
-              <div style="clear:both;"></div>
-            </div>
-            <div class="a_comment">
-              <div class="person">
-                <img src="../Asset/Images/profile_pics/head_pete_river.png"
-                style="height:45px; width:45px ;border-radius: 100px;">
-              </div>
-              <div class="comment_content">
-                <p id="comment_name"> <a href="Profile-JT.html">Justus Townsend </a></p>
-                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-              </div>
-              <div style="clear:both;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-secondary ldm" id="ldm2" onclick="showComments(2)"> Load More Comments </button>
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-outline-primary" onclick="typeComment(2)"> <i class="fa fa-comment"></i> Comment </button>
-          <div id="type2" style="display: none;">
-            <textarea class="form-control comment" id="c2" rows="4" placeholder="Add your comment..."></textarea>
-            <button class="btn btn-dark" onclick="postComment(2)">Post</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="filter event">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/event.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING Event</h2>
-      </div>
-        <h6> by John Doe </h6>
-        <h7 style="color: grey; margin-bottom: 12px;">November 6 at 13:11 </h7>
-        <h4> Location @ Price Center</h4>
-        <h5> Date: 11/22/2018</h5>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots3">...</span><span id="more3" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
-          venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark myBtn" onclick="showmore(3)" id="rm3"> Read More </button>
-
-        <div class="comments" id="comment3">
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_pete_river.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"> <a href="Profile-JaD.html">Jane Doe </a></p>
-              <p id="comment_stuff"> Nice work :) </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_belize_hole.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"> <a href="Profile-JM.html">Jaylin Martin </a></p>
-              <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-
-          <div id="hd3" style="display: none;">
-            <div class="a_comment" >
-              <div class="person">
-                <img src="../Asset/Images/profile_pics/head_green_sea.png"
-                style="height:45px; width:45px ;border-radius: 100px;">
-              </div>
-              <div class="comment_content">
-                <p id="comment_name"><a href="Profile-DF.html"> Dereon Fritz </a></p>
-                <p id="comment_stuff"> Ha Ha Ha </p>
-              </div>
-              <div style="clear:both;"></div>
-            </div>
-            <div class="a_comment">
-              <div class="person">
-                <img src="../Asset/Images/profile_pics/head_pete_river.png"
-                style="height:45px; width:45px ;border-radius: 100px;">
-              </div>
-              <div class="comment_content">
-                <p id="comment_name"><a href="Profile-AO.html"> Annie Obrien</a></p>
-                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-              </div>
-              <div style="clear:both;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-secondary ldm" id="ldm3" onclick="showComments(3)"> Load More Comments </button>
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-outline-primary" onclick="typeComment(3)"> <i class="fa fa-comment"></i> Comment </button>
-          <div id="type3" style="display: none;">
-            <textarea class="form-control comment" id="c3" rows="4" placeholder="Add your comment..."></textarea>
-            <button class="btn btn-dark" onclick="postComment(3)">Post</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="filter general">
-      <div class="card" id="card-t">
-        <div id="container">
-        <img src="../Asset/general.svg"width="35" height="35" align="left" style="margin-right: 20px;"/>
-        <h2>TITLE HEADING General</h2>
-      </div>
-        <h6> by Dereon Fritz </h6>
-        <h7 style="color: grey; margin-bottom: 12px;">November 6 at 10:24</h7>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots4">...</span><span id="more4" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
-          venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button class="btn btn-outline-dark myBtn" onclick="showmore(4)" id="rm4"> Read More </button>
-
-        <div class="comments" id="comment4">
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_pete_river.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"><a href="Profile-JD.html">John Doe </a></p>
-              <p id="comment_stuff"> This is Nice, thank you :) </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-          <div class="a_comment">
-            <div class="person">
-              <img src="../Asset/Images/profile_pics/head_belize_hole.png"
-              style="height:45px; width:45px ;border-radius: 100px;">
-            </div>
-            <div class="comment_content">
-              <p id="comment_name"><a href="Profile-LB.html">Lilly Bryant</a></p>
-              <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-            </div>
-            <div style="clear:both;"></div>
-          </div>
-
-          <div id="hd4" style="display: none;">
-            <div class="a_comment">
-              <div class="person">
-                <img src="../Asset/Images/profile_pics/head_pete_river.png"
-                style="height:45px; width:45px ;border-radius: 100px;">
-              </div>
-              <div class="comment_content">
-                <p id="comment_name"><a href="Profile-AM.html"> Ariel Moreno </a></p>
-                <p id="comment_stuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel </p>
-              </div>
-              <div style="clear:both;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div align="right" class="bgroup">
-          <button class="btn btn-outline-secondary ldm" id="ldm4" onclick="showComments(4)"> Load More Comments </button>
-          <button class="btn btn-outline-success"> <i class="fa fa-thumbs-up"></i> Like </button>
-          <button class="btn btn-outline-primary" onclick="typeComment(4)"> <i class="fa fa-comment"></i> Comment </button>
-          <div id="type4" style="display: none;">
-            <textarea class="form-control comment" id="c4" rows="4" placeholder="Add your comment..."></textarea>
-            <button class="btn btn-dark" onclick="postComment(4)">Post</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="rightcolumn">
-    <div class="card" id="card-t">
-      <h2 style="font-size: 24px;">Campus Ads</h2>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-    <div class="card" id="card-t">
-      <h2 style="font-size: 24px;">Campus Ads</h2>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-  </div>
-
-</div>
-
-<!-- Chat page -->
-<div class="overlaychat" id="chat">
-<div class="messaging">
+  <!-- Chat page -->
+  <div class="overlaychat" id="chat">
+    <div class="messaging">
       <div class="inbox_msg">
         <div class="inbox_people">
           <div class="headind_srch">
@@ -484,13 +480,14 @@
           </div>
         </div>
         <div class="mesgs">
-          <div class="msg_history"  id="chat_history1">
+          <div class="msg_history" id="chat_history1">
             <div class="incoming_msg">
               <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p>Now you can start chatting with John Doe</p>
-                  <span class="time_date"> Now   |   Today</span></div>
+                  <span class="time_date"> Now | Today</span>
+                </div>
               </div>
             </div>
           </div>
@@ -500,13 +497,15 @@
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p>Test 2</p>
-                  <span class="time_date"> 10:00 AM   |   Yesterday</span></div>
+                  <span class="time_date"> 10:00 AM | Yesterday</span>
+                </div>
               </div>
             </div>
             <div class="outgoing_msg">
               <div class="sent_msg">
                 <p>What's up</p>
-                <span class="time_date"> 11:01 AM    |    Yesterday</span> </div>
+                <span class="time_date"> 11:01 AM | Yesterday</span>
+              </div>
             </div>
           </div>
           <div class="type_msg">
@@ -518,266 +517,269 @@
         </div>
 
 
-          <div class="msg_history" id="chat_history2">
-            <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p>Test 2</p>
-                  <span class="time_date"> Now   |   Today</span></div>
+        <div class="msg_history" id="chat_history2">
+          <div class="incoming_msg">
+            <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>
+            <div class="received_msg">
+              <div class="received_withd_msg">
+                <p>Test 2</p>
+                <span class="time_date"> Now | Today</span>
               </div>
             </div>
           </div>
+        </div>
 
       </div>
 
-    </div></div>
-<!-- end of chat page -->
-
-<!-- nearby chat box -->
-<div id="live-chat">
-
-  <header class="clearfix">
-
-    <!--<a href="#" class="chat-close"><i class="far fa-times-circle"></i></a>-->
-    <a class="chat-status"></a>
-    <h4 style="font-weight:bold;"> <i class="fas fa-comments"></i> Talks Near You</h4>
-
-    <span class="chat-message-counter">3</span>
-
-  </header>
-
-  <div class="chat">
-
-    <div class="chat-history">
-
-      <div class="chat-message clearfix">
-
-        <img src="../Asset/Images/profile_pics/head_alizarin.png" alt="" width="32" height="32">
-
-        <div class="chat-message-content clearfix">
-
-          <span class="chat-time"> 1 min ago</span>
-
-          <h5>John </h5>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, explicabo quasi ratione odio dolorum harum.</p>
-
-        </div> <!-- end chat-message-content -->
-
-      </div> <!-- end chat-message -->
-
-      <hr>
-
-      <div class="chat-message clearfix">
-
-        <img src="../Asset/Images/profile_pics/head_carrot.png" alt="" width="32" height="32">
-
-        <div class="chat-message-content clearfix">
-
-          <span class="chat-time">10 mins ago</span>
-
-          <h5>Marco</h5>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
-
-        </div> <!-- end chat-message-content -->
-
-      </div> <!-- end chat-message -->
-
-      <hr>
-
-      <div class="chat-message clearfix">
-
-        <img src="../Asset/Images/profile_pics/head_pete_river.png" alt="" width="32" height="32">
-
-        <div class="chat-message-content clearfix">
-
-          <span class="chat-time">13:38</span>
-
-          <h5>William</h5>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-
-        </div> <!-- end chat-message-content -->
-
-      </div> <!-- end chat-message -->
-
-      <hr>
-
-    </div> <!-- end chat-history -->
-
-    <input id="postNear" style="margin: 20px 10px 30px 40px"type="text" placeholder="Type your message..." autofocus>
-
-  </div> <!-- end chat -->
-
-</div> <!-- end live-chat -->
-
-<!-- Create Post -->
-<!-- General -->
-<div class="createOverlay" id="generalPost">
-  <div class="create">
-    <h1>Create Your Post (General)</h1>
-    <form>
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input type="title" class="form-control" id="general-title">
     </div>
-
-    <div class="form-group">
-      <label for="content">Content</label>
-      <textarea class="form-control" id="general-content" rows="10"></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="file">File</label>
-      <input type="file" class="form-control-file" id="file">
-    </div>
-    <input class="btn btn-primary" value="Post" id="general-post"></input>
-    <a onclick="closePost()">
-      <input class="btn btn-danger" value="Close"></input>
-    </a>
-    </form>
   </div>
-</div>
-<!-- end of general-->
+  <!-- end of chat page -->
 
-<!-- Academic -->
-<div class="createOverlay" id="academicPost">
-  <div class="create">
-    <h1>Create Your Post (Academic)</h1>
-    <form>
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input type="title" class="form-control" id="academic-title">
-    </div>
+  <!-- nearby chat box -->
+  <div id="live-chat">
 
-    <div class="form-group">
-      <label for="subject">Subject</label>
-      <textarea class="form-control" id="academic-subject" rows="1"></textarea>
-    </div>
+    <header class="clearfix">
 
-    <div class="form-group">
-      <label for="content">Content</label>
-      <textarea class="form-control" id="academic-content" rows="10"></textarea>
-    </div>
+      <!--<a href="#" class="chat-close"><i class="far fa-times-circle"></i></a>-->
+      <a class="chat-status"></a>
+      <h4 style="font-weight:bold;"> <i class="fas fa-comments"></i> Talks Near You</h4>
 
-    <div class="form-group">
-      <label for="file">File</label>
-      <input type="file" class="form-control-file" id="file">
+      <span class="chat-message-counter">3</span>
+
+    </header>
+
+    <div class="chat">
+
+      <div class="chat-history">
+
+        <div class="chat-message clearfix">
+
+          <img src="../Asset/Images/profile_pics/head_alizarin.png" alt="" width="32" height="32">
+
+          <div class="chat-message-content clearfix">
+
+            <span class="chat-time"> 1 min ago</span>
+
+            <h5>John </h5>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, explicabo quasi ratione odio dolorum harum.</p>
+
+          </div> <!-- end chat-message-content -->
+
+        </div> <!-- end chat-message -->
+
+        <hr>
+
+        <div class="chat-message clearfix">
+
+          <img src="../Asset/Images/profile_pics/head_carrot.png" alt="" width="32" height="32">
+
+          <div class="chat-message-content clearfix">
+
+            <span class="chat-time">10 mins ago</span>
+
+            <h5>Marco</h5>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
+
+          </div> <!-- end chat-message-content -->
+
+        </div> <!-- end chat-message -->
+
+        <hr>
+
+        <div class="chat-message clearfix">
+
+          <img src="../Asset/Images/profile_pics/head_pete_river.png" alt="" width="32" height="32">
+
+          <div class="chat-message-content clearfix">
+
+            <span class="chat-time">13:38</span>
+
+            <h5>William</h5>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+          </div> <!-- end chat-message-content -->
+
+        </div> <!-- end chat-message -->
+
+        <hr>
+
+      </div> <!-- end chat-history -->
+
+      <input id="postNear" style="margin: 20px 10px 30px 40px" type="text" placeholder="Type your message..." autofocus>
+
+    </div> <!-- end chat -->
+
+  </div> <!-- end live-chat -->
+
+  <!-- Create Post -->
+  <!-- General -->
+  <div class="createOverlay" id="generalPost">
+    <div class="create">
+      <h1>Create Your Post (General)</h1>
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="title" class="form-control" id="general-title">
+        </div>
+
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea class="form-control" id="general-content" rows="10"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="file">File</label>
+          <input type="file" class="form-control-file" id="file">
+        </div>
+        <input class="btn btn-primary" value="Post" id="general-post"></input>
+        <a onclick="closePost()">
+          <input class="btn btn-danger" value="Close"></input>
+        </a>
+      </form>
     </div>
-    <input class="btn btn-primary" value="Post" id="academic-post"></input>
-    <a onclick="closePost1()">
-      <input class="btn btn-danger" value="Close"></input>
-    </a>
-    </form>
   </div>
-</div>
+  <!-- end of general-->
 
-<!-- end of academic -->
+  <!-- Academic -->
+  <div class="createOverlay" id="academicPost">
+    <div class="create">
+      <h1>Create Your Post (Academic)</h1>
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="title" class="form-control" id="academic-title">
+        </div>
 
-<!-- Event -->
-<div class="createOverlay" id="eventPost">
-  <div class="create">
-    <h1>Create Your Post (Event)</h1>
-  <form>
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input type="title" class="form-control" id="event-title">
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <textarea class="form-control" id="academic-subject" rows="1"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea class="form-control" id="academic-content" rows="10"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="file">File</label>
+          <input type="file" class="form-control-file" id="file">
+        </div>
+        <input class="btn btn-primary" value="Post" id="academic-post"></input>
+        <a onclick="closePost1()">
+          <input class="btn btn-danger" value="Close"></input>
+        </a>
+      </form>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="location">Location</label>
-    <textarea class="form-control" id="event-location" rows="1"></textarea>
+  <!-- end of academic -->
+
+  <!-- Event -->
+  <div class="createOverlay" id="eventPost">
+    <div class="create">
+      <h1>Create Your Post (Event)</h1>
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="title" class="form-control" id="event-title">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <textarea class="form-control" id="event-location" rows="1"></textarea>
+        </div>
+
+
+        <form method="post">
+          <div class="form-group">
+            <!-- Date input -->
+            <label for="time">Date</label>
+            <input class="form-control" id="event-date" placeholder="MM/DD/YYYY" />
+          </div>
+        </form>
+
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="event-description" rows="10"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="file">File</label>
+          <input type="file" class="form-control-file" id="file">
+        </div>
+
+        <input class="btn btn-primary" value="Post" id="event-post"></input>
+        <a onclick="closePost2()">
+          <input class="btn btn-danger" value="Close"></input>
+        </a>
+      </form>
+    </div>
   </div>
+  <!-- end of event -->
 
 
-  <form method="post">
-   <div class="form-group"> <!-- Date input -->
-     <label for="time">Date</label>
-     <input class="form-control" id="event-date" placeholder="MM/DD/YYYY"/>
-   </div>
-  </form>
+  <script src="../JS/GoogleMap.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8se8vgPxg675Ez2KFs7y7Ed9NDBIt8vc&callback&libraries=places&callback=initMap" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="../JS/feeds.js"></script>
+  <script src="../JS/map.js"></script>
+  <script>
+    (function() {
 
+      $('#live-chat header').on('click', function() {
 
-  <div class="form-group">
-    <label for="description">Description</label>
-    <textarea class="form-control" id="event-description" rows="10"></textarea>
-  </div>
+        $('.chat').slideToggle(300, 'swing');
+        $('.chat-message-counter').fadeToggle(300, 'swing');
 
-  <div class="form-group">
-    <label for="file">File</label>
-    <input type="file" class="form-control-file" id="file">
-  </div>
+      });
 
-    <input class="btn btn-primary" value="Post" id="event-post"></input>
-    <a onclick="closePost2()">
-      <input class="btn btn-danger" value="Close"></input>
-    </a>
-  </form>
-  </div>
-</div>
-<!-- end of event -->
+      $('.chat-close').on('click', function(e) {
 
+        e.preventDefault();
+        $('#live-chat').fadeOut(300);
 
-<script src = "../JS/GoogleMap.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8se8vgPxg675Ez2KFs7y7Ed9NDBIt8vc&callback&libraries=places&callback=initMap"
-         async defer></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script src="../JS/feeds.js"></script>
-<script src="../JS/map.js"></script>
-<script>
-(function() {
+      });
 
-$('#live-chat header').on('click', function() {
+    })();
 
-  $('.chat').slideToggle(300, 'swing');
-  $('.chat-message-counter').fadeToggle(300, 'swing');
+    $(document).ready(function() {
+      $('.btn-outline-success').click(function() {
+        if ($(this).hasClass("active")) {
+          alert("You dislike the post");
+        } else {
+          alert("You like the post");
+        }
+        $(this).toggleClass("active");
+      });
+    });
 
-});
+    $(document).ready(function() {
+      $('.btn-outline-primary').click(function() {
 
-$('.chat-close').on('click', function(e) {
+        $(this).toggleClass("active");
+      });
+    });
 
-  e.preventDefault();
-  $('#live-chat').fadeOut(300);
+    $(document).ready(function() {
+      $('.btn-outline-dark').click(function() {
+        $(this).toggleClass("active");
+      });
+    });
 
-});
-
-}) ();
-
-$(document).ready(function() {
-  $('.btn-outline-success').click(function() {
-    if ($(this).hasClass("active")) {
-      alert("You dislike the post");
-    } else {
-      alert("You like the post");
-    }
-    $(this).toggleClass("active");
-  });
-});
-
-$(document).ready(function() {
-  $('.btn-outline-primary').click(function() {
-
-    $(this).toggleClass("active");
-  });
-});
-
-$(document).ready(function() {
-  $('.btn-outline-dark').click(function() {
-    $(this).toggleClass("active");
-  });
-});
-
-$(document).ready(function() {
-  $('.btn-outline-secondary').click(function() {
-    $(this).toggleClass("active");
-  });
-});
-</script>
+    $(document).ready(function() {
+      $('.btn-outline-secondary').click(function() {
+        $(this).toggleClass("active");
+      });
+    });
+  </script>
 
 </body>
+
 </html>
