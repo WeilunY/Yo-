@@ -18,7 +18,7 @@ function openChat(name) {
   // create a chatlist var
   $(".inbox_chat").prepend('<div class="chat_list" id="chat_name' + totalChat + '">\
     <div class="chat_people" onclick="switchChat(' + totalChat + ')">\
-    <div class="chat_img"> <img src="img_avatar.png" alt="sunil"> </div>\
+    <div class="chat_img"> <img src="Pages/img_avatar.png" alt="sunil"> </div>\
     <div class="chat_ib">\
     <h5>' + name + '<span class="chat_date">Now</span></h5>\
     <p>Now you can start chatting with ' + name + '</p>\
@@ -27,7 +27,7 @@ function openChat(name) {
   // chat history
   $(".mesgs").prepend('<div class="msg_history"  id="chat_history' + totalChat + '">\
     <div class="incoming_msg">\
-    <div class="incoming_msg_img"> <img src="img_avatar.png" alt="sunil"> </div>\
+    <div class="incoming_msg_img"> <img src="Pages/img_avatar.png" alt="sunil"> </div>\
     <div class="received_msg">\
     <div class="received_withd_msg">\
     <p>Now you can start chatting with ' + name + '</p>\
@@ -130,7 +130,7 @@ function postComment(num) {
     if (confirm("Are you ready to post " + text + "?")) {
       $(commentID).prepend('<div class="a_comment">\
       <div class="person">\
-      <img src="../Asset/Images/profile_pics/head_wisteria.png"\
+      <img src="Asset/Images/profile_pics/head_wisteria.png"\
       style="height:45px; width:45px ;border-radius: 100px;">\
       </div>\
       <div class="comment_content">\
@@ -153,7 +153,7 @@ $('#postNear').keypress(function(event) {
     } else {
       var text = $('#postNear').val();
       $('.chat-history').prepend("<div class='chat-message clearfix'>\
-        <img src='../Asset/Images/profile_pics/head_wisteria.png' width='32' height='32'>\
+        <img src='Asset/Images/profile_pics/head_wisteria.png' width='32' height='32'>\
         <div class='chat-message-content clearfix'>\
         <span class='chat-time'>now</span>\
         <h5>You</h5>\
@@ -177,7 +177,7 @@ $('#general-post').click(function() {
     $("#midpost").prepend("<div class='filter general show'>\
     <div class='card' id='card-t'>\
     <div id='container'>\
-    <img src='../Asset/general.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
+    <img src='Asset/general.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
     <h2>" + title.val() + "</h2>\
     </div>\
     <h6> by You </h6>\
@@ -206,7 +206,7 @@ $('#academic-post').click(function() {
     $("#midpost").prepend("<div class='filter academic show'>\
     <div class='card' id='card-t'>\
     <div id='container'>\
-    <img src='../Asset/academic.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
+    <img src='Asset/academic.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
     <h2>" + title.val() + "</h2>\
     </div>\
     <h6> by You </h6>\
@@ -238,7 +238,7 @@ $('#event-post').click(function() {
     $("#midpost").prepend("<div class='filter event show'>\
     <div class='card' id='card-t'>\
     <div id='container'>\
-    <img src='../Asset/event.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
+    <img src='Asset/event.svg' width='35' height='35' align='left' style='margin-right: 20px;'/>\
     <h2>" + title.val() + "</h2>\
     </div>\
     <h6> by You </h6>\

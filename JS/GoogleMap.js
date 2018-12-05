@@ -239,7 +239,7 @@ function initMap() {
 
   // Set emoji on to location
   var info = new google.maps.InfoWindow();
-  var iconpath = "../Asset/emoji/";
+  var iconpath = "Asset/emoji/";
 
   var marker, i;
 
@@ -357,7 +357,7 @@ function postEmoji(map, emoji, title) {
         lng: position.coords.longitude
       };
 
-      var iconpath = "../Asset/emoji/";
+      var iconpath = "Asset/emoji/";
 
       marker = new google.maps.Marker({
         position: pos,
